@@ -1,0 +1,9 @@
+{
+    "TestCase_Name":"03_verify_user_can_cancel_checkout_and redirected_to_cart",
+    "TestCase_ID":"03",
+    "User":"standard_user",
+    "Bike_light":"Sauce Labs Bike Light",
+    "First_Name":"standard",
+    "Last_Name":"user",
+    "Zip_Code":"123456"
+}

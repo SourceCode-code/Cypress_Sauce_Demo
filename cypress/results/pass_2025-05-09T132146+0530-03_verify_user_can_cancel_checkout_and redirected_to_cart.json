@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-09T07:51:35.827Z",
+    "end": "2025-05-09T07:51:46.031Z",
+    "duration": 10204,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02cb5489-79f4-4ea8-b573-9e0530de54c0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Checkout_Testcases\\03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+      "file": "cypress\\e2e\\Checkout_Testcases\\03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e65caa5-94be-42db-a670-32e2bce018f3",
+          "title": "03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+              "fullTitle": "03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js 03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+              "timedOut": null,
+              "duration": 6991,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on cancel button\n_CheckoutPage.checkout_page.clickOnCancelButton();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);",
+              "err": {},
+              "uuid": "cdd1c036-5614-4dce-8b41-8508fccdea7a",
+              "parentUUID": "6e65caa5-94be-42db-a670-32e2bce018f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdd1c036-5614-4dce-8b41-8508fccdea7a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6991,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "reportFilename": "[status]_[datetime]-[name]",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

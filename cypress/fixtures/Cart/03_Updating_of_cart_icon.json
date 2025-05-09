@@ -1,0 +1,7 @@
+{
+    "TestCase_Name":"03_verify_updating_of_cart_after_adding_multiple_item",
+    "TestCase_ID":"03",
+    "User":"standard_user",
+    "Bike_light":"Sauce Labs Bike Light",
+    "Bagpack":"Sauce Labs Backpack"
+}

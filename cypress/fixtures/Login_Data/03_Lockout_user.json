@@ -1,0 +1,6 @@
+{
+    "TestCase_Name":"03_Verify_Lockout_user_failed_login",
+    "TestCase_ID":"03",
+    "Locket_out_User":"locked_out_user",
+    "ErrorText":"Sorry, this user has been locked out."
+}

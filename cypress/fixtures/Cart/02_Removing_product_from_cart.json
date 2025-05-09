@@ -1,0 +1,6 @@
+{
+    "TestCase_Name":"02_verify_removing_item_from_the_cart",
+    "TestCase_ID":"02",
+    "User":"standard_user",
+    "Bike_light":"Sauce Labs Bike Light"
+}

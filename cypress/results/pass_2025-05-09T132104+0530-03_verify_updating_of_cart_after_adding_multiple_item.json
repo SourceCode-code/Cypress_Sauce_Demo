@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-09T07:50:56.015Z",
+    "end": "2025-05-09T07:51:04.866Z",
+    "duration": 8851,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a213502a-5090-41e2-84b2-77a5449e3017",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Cart_Testcases\\03_verify_updating_of_cart_after_adding_multiple_item.cy.js",
+      "file": "cypress\\e2e\\Cart_Testcases\\03_verify_updating_of_cart_after_adding_multiple_item.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "13707d26-55e3-4536-9052-bd30e9875b17",
+          "title": "03_verify_updating_of_cart_after_adding_multiple_item",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "03_verify_updating_of_cart_after_adding_multiple_item",
+              "fullTitle": "03_verify_updating_of_cart_after_adding_multiple_item 03_verify_updating_of_cart_after_adding_multiple_item",
+              "timedOut": null,
+              "duration": 5601,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\ncy.wait(1000);\n//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bike_light);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify bike light  item not  present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bagpack);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//verify no item present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);",
+              "err": {},
+              "uuid": "a3f32cba-6ff1-4000-b99c-efb546df5bc3",
+              "parentUUID": "13707d26-55e3-4536-9052-bd30e9875b17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a3f32cba-6ff1-4000-b99c-efb546df5bc3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5601,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "reportFilename": "[status]_[datetime]-[name]",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

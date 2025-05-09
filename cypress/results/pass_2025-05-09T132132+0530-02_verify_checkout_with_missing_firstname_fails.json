@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-09T07:51:22.734Z",
+    "end": "2025-05-09T07:51:32.015Z",
+    "duration": 9281,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cc72306f-7d6f-4bdb-9928-942013d70c01",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Checkout_Testcases\\02_verify_checkout_with_missing_firstname_fails.cy.js",
+      "file": "cypress\\e2e\\Checkout_Testcases\\02_verify_checkout_with_missing_firstname_fails.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0e929857-2dc8-4eee-a6ea-3ff8037a4275",
+          "title": "02_verify_checkout_with_missing_firstname_fails.cy.js",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "02_verify_checkout_with_missing_firstname_fails.cy.js",
+              "fullTitle": "02_verify_checkout_with_missing_firstname_fails.cy.js 02_verify_checkout_with_missing_firstname_fails.cy.js",
+              "timedOut": null,
+              "duration": 6173,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify error is displayed \n_CheckoutPage.checkout_page.VerifyError_Pop_up();\n//verify Item Still added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify still on checkout page \n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();",
+              "err": {},
+              "uuid": "830b79b2-06a7-4f61-aa06-37369615af9f",
+              "parentUUID": "0e929857-2dc8-4eee-a6ea-3ff8037a4275",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "830b79b2-06a7-4f61-aa06-37369615af9f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6173,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "reportFilename": "[status]_[datetime]-[name]",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

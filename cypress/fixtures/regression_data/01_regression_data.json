@@ -1,0 +1,12 @@
+{
+    "TestCase_Name": "01_Verify_successful_purchase_multiple_items",
+    "TestCase_ID": "01",
+    "User": "standard_user",
+    "Bike_light": "Sauce Labs Bike Light",
+    "Bagpack": "Sauce Labs Backpack",
+    "First_Name": "standard",
+    "Last_Name": "user",
+    "Zip_Code": "123456",
+    "Price_Item_1": "$9.99",
+    "Price_Item_2":"$29.99"
+}

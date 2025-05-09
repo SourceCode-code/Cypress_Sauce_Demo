@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-09T07:52:25.343Z",
+    "end": "2025-05-09T07:52:30.910Z",
+    "duration": 5567,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ea989e38-b6a5-4331-b459-10d96cc1115c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login_Testcases\\03_Verify_Lockout_user_failed_login.cy.js",
+      "file": "cypress\\e2e\\Login_Testcases\\03_Verify_Lockout_user_failed_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "464182ec-8e46-42f4-b18c-282049356ceb",
+          "title": "03_Verify_Lockout_user_failed_login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "03_Verify_Lockout_user_failed_login",
+              "fullTitle": "03_Verify_Lockout_user_failed_login 03_Verify_Lockout_user_failed_login",
+              "timedOut": null,
+              "duration": 2855,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(Locket_out_User);\n//verify the home is visble \n_navigationPage.NavigationPage.verifyLoginErrorPopup(ErrorText);",
+              "err": {},
+              "uuid": "90130796-30e1-4bcb-8447-95c8f060efae",
+              "parentUUID": "464182ec-8e46-42f4-b18c-282049356ceb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90130796-30e1-4bcb-8447-95c8f060efae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2855,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "reportFilename": "[status]_[datetime]-[name]",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "TestCase_Name":"02_Verify_Invalid_Login_by_wrong_password",
+    "TestCase_ID":"02",
+    "Invalid_User":"Invalid_user",
+    "ErrorText":"Username and password do not match any user in this service"
+}

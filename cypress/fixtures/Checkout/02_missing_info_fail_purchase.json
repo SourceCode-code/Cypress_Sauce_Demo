@@ -1,0 +1,8 @@
+{
+    "TestCase_Name": "02_verify_checkout_with_missing_firstname_fails.cy.js",
+    "TestCase_ID": "02",
+    "User": "standard_user",
+    "Bike_light": "Sauce Labs Bike Light",
+    "Last_Name": "user",
+    "Zip_Code": "123456"
+}

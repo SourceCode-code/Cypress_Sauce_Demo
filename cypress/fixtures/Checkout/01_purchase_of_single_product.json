@@ -1,0 +1,10 @@
+{
+    "TestCase_Name":"01_verify_complete_successful_purchase_of_single_item",
+    "TestCase_ID":"01",
+    "User":"standard_user",
+    "Bike_light":"Sauce Labs Bike Light",
+    "First_Name":"standard",
+    "Last_Name":"user",
+    "Zip_Code":"123456",
+    "Price":"$9.99"
+}
