@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-16T18:32:01.221Z",
+    "end": "2025-05-16T18:32:11.184Z",
+    "duration": 9963,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d1d16aa8-b153-41d3-b1a3-21c6b2a68b22",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Cart_Testcases\\07_verify_Adding_single_item_to_cart.cy.js",
+      "file": "cypress\\e2e\\Cart_Testcases\\07_verify_Adding_single_item_to_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "01c573fb-709a-489a-af45-ebd9762c96e7",
+          "title": "07_verify_Adding_single_item_to_cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "01_verify_Adding_single_item_to_cart",
+              "fullTitle": "07_verify_Adding_single_item_to_cart 01_verify_Adding_single_item_to_cart",
+              "timedOut": null,
+              "duration": 4663,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);",
+              "err": {},
+              "uuid": "bb8e3f41-83ee-428f-ac2e-597a673e3b77",
+              "parentUUID": "01c573fb-709a-489a-af45-ebd9762c96e7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb8e3f41-83ee-428f-ac2e-597a673e3b77"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4663,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "reportFilename": "[status]_[datetime]-[name]",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

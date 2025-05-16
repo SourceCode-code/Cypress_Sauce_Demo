@@ -13,10 +13,10 @@
     "getMochawesomeReport": "npx mochawesome-merge cypress\\results\\*.json -o output.json",
     "clean:reports": "node cleanupReports.js",
     "clean:output": "node cleanupOutput.js",
-    "clean_report_files":"npm run clean:reports && npm run clean:output",
+    "clean_report_files": "npm run clean:reports && npm run clean:output",
     "getHTMLReport": "npx marge output.json",
     "generate_report": "npm run getMochawesomeReport && npm run getHTMLReport",
-   "Run_and_update_sheet": "node clean_mochawesome.js && npm run clean_report_files && npm run Run_Tests && npm run getMochawesomeReport && node syncTestResultsToExcel.js"
+    "Run_and_update_Result_sheet": "node runAllSteps.js"
   },
   "keywords": [],
   "author": "",
@@ -24,11 +24,15 @@
   "description": "",
   "dependencies": {
     "cypress": "^14.3.3",
+    "exceljs": "^4.4.0",
     "fs": "^0.0.1-security",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0",
     "npx": "^10.2.2",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
