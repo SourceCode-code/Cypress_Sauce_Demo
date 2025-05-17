@@ -29,8 +29,9 @@ jobs:
           rm -rf node_modules package-lock.json
           npm install
 
-      - name: Run Cypress tests
-        run: npm run Run_Tests
+      - name: Generate Excel report
+        if: always()
+        run: npm run Run_and_update_Result_sheet
 
       - name: Generate combined Mochawesome report (JSON + HTML)
         if: always()
