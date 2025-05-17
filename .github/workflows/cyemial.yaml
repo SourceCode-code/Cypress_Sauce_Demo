@@ -97,8 +97,8 @@ jobs:
           from:  siddhantsourceandcode@gmail.com
           subject: "Cypress Test Results - ${{ github.run_number }} $(date +'%d-%m-%y')"
           attachments: |
-            cypress/results/output.json
-            cypress/results/output.html
+            cypress_Task/output.json
+            cypress_Task/mochawesome-report/output.html
             cypress_Task/Daily_Tracker.xlsx
           body: |
             Dear Team,
