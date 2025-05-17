@@ -19,19 +19,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Set up Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
 
-      - name: Install all dependencies
-        run: npm install
+      - name: Install dependencies cleanly
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       - name: Install Cypress binary
         run: npx cypress install
-
-      - name: Fix Cypress binary permissions
-        run: chmod +x ./node_modules/.bin/cypress
 
       - name: Run Cypress tests with mochawesome reporter
         run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/results,overwrite=true,html=false,json=true
@@ -42,13 +41,13 @@ jobs:
           npx mochawesome-merge cypress/results/*.json -o cypress/results/output.json
           npx marge cypress/results/output.json --reportDir cypress/results --inline
 
-      - name: Generate Excel report
+      - name: Generate Excel report if script exists
         if: always()
         run: |
           if [ -f ./generate_excel_report.js ]; then
             node generate_excel_report.js
           else
-            echo "generate_excel_report.js not found, skipping Excel report generation."
+            echo "generate_excel_report.js not found, skipping."
           fi
 
       - name: Upload test artifacts
@@ -96,7 +95,7 @@ jobs:
           password: ${{ secrets.GMAIL_PASSWORD }}
           to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com
           from: ${{ secrets.GMAIL_USERNAME }}
-          subject: "Cypress Test Results - ${{ github.run_id }}"
+          subject: "Cypress Test Results - ${{ github.run_number }}"
           attachments: |
             cypress/results/output.json
             cypress/results/output.html
@@ -111,7 +110,7 @@ jobs:
             - Pending: ${{ env.TOTAL_PENDING }}
             - Failed Test Cases: ${{ env.FAILED_CASES }}
 
-            Please find the attached HTML and Excel reports for full details.
+            Please find the attached reports.
 
-            Regards,  
-            Your Automation Team
+            Regards,
+            Automation Team
