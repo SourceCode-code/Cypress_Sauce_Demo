@@ -39,10 +39,6 @@ jobs:
           npm run getMochawesomeReport
           npm run getHTMLReport
 
-      - name: Generate Excel report
-        if: always()
-        run: npm run Run_and_update_Result_sheet
-
       - name: Install jq for JSON parsing
         if: always()
         run: sudo apt-get update && sudo apt-get install -y jq
