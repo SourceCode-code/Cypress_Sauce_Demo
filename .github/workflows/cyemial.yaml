@@ -3,7 +3,7 @@ name: Cypress Tests
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 3 * * *'  # 9:00 AM IST (UTC+5:30 → 03:30 UTC)
+    - cron: '30 3 * * *'  # 9:00 AM IST
   push:
     branches:
       - main
@@ -45,7 +45,7 @@ jobs:
 
       - name: Upload test artifacts
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-artifacts
           path: |
@@ -84,7 +84,7 @@ jobs:
           password: ${{ secrets.GMAIL_PASSWORD }}
           to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com
           from: ${{ secrets.GMAIL_USERNAME }}
-          subject: "Cypress Test Results - $(date +'%d-%m-%Y')"
+          subject: "Cypress Test Results - ${{ github.run_id }}"
           attachments: |
             cypress/results/output.json
             cypress/results/output.html
