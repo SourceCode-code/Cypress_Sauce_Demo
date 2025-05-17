@@ -1,9 +1,9 @@
 name: Cypress Tests
 
 on:
-  schedule:
-    - cron: '30 3 * * *'  # Runs daily at 9:00 AM IST (UTC +5:30)
   workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * *'  # 9:00 AM IST (UTC+5:30 → 03:30 UTC)
   push:
     branches:
       - main
@@ -27,42 +27,44 @@ jobs:
       - name: Install all dependencies from package.json
         run: npm install
 
+      - name: Fix Cypress binary permissions
+        run: chmod +x ./node_modules/.bin/cypress
+
       - name: Run Cypress tests with mochawesome reporter
         run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/results,overwrite=true,html=false,json=true
 
-      - name: Generate combined mochawesome report
+      - name: Generate combined Mochawesome report
         if: always()
         run: |
-          npx mochawesome-merge cypress/results/*.json -o output.json
-          npx marge output.json --reportDir mochawesome-report --inline
+          npx mochawesome-merge cypress/results/*.json -o cypress/results/output.json
+          npx marge cypress/results/output.json --reportDir cypress/results --inline
 
       - name: Generate Excel report
         if: always()
-        run: node runAllSteps.js
+        run: node generate_excel_report.js
 
-      - name: Upload artifacts (JSON, HTML, Excel)
+      - name: Upload test artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: test-artifacts
           path: |
-            output.json
-            mochawesome-report/*.html
-            test_results.xlsx
+            cypress/results/output.json
+            cypress/results/output.html
+            cypress/results/test_results.xlsx
 
       - name: Install jq
         if: always()
         run: sudo apt-get install -y jq
 
-      - name: Extract test result summary
+      - name: Extract test summary stats
         if: always()
         id: extract_results
         run: |
-          total_passed=$(jq '.stats.passes' output.json)
-          total_failed=$(jq '.stats.failures' output.json)
-          total_pending=$(jq '.stats.pending' output.json)
-          failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' output.json)
-
+          total_passed=$(jq '.stats.passes' cypress/results/output.json)
+          total_failed=$(jq '.stats.failures' cypress/results/output.json)
+          total_pending=$(jq '.stats.pending' cypress/results/output.json)
+          failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' cypress/results/output.json)
           total_tests=$((total_passed + total_failed + total_pending))
 
           echo "TOTAL_TESTS=$total_tests" >> $GITHUB_ENV
@@ -82,22 +84,22 @@ jobs:
           password: ${{ secrets.GMAIL_PASSWORD }}
           to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com
           from: ${{ secrets.GMAIL_USERNAME }}
-          subject: "Cypress Test Results - $(date +'%d-%m-%y')"
+          subject: "Cypress Test Results - $(date +'%d-%m-%Y')"
           attachments: |
-            output.json
-            mochawesome-report/*.html
-            test_results.xlsx
+            cypress/results/output.json
+            cypress/results/output.html
+            cypress/results/test_results.xlsx
           body: |
             Dear Team,
 
             Here are the Cypress test results from the latest run:
-            - Total Run Testcases: ${{ env.TOTAL_TESTS }}
-            - Total Passed: ${{ env.TOTAL_PASSED }}
-            - Total Failed: ${{ env.TOTAL_FAILED }}
-            - Total Pending: ${{ env.TOTAL_PENDING }}
+            - Total Testcases: ${{ env.TOTAL_TESTS }}
+            - Passed: ${{ env.TOTAL_PASSED }}
+            - Failed: ${{ env.TOTAL_FAILED }}
+            - Pending: ${{ env.TOTAL_PENDING }}
             - Failed Test Cases: ${{ env.FAILED_CASES }}
 
-            Please check the attached report and Excel file for detailed information.
+            Please find the attached HTML and Excel reports for full details.
 
-            Best regards,
+            Regards,  
             Your Automation Team
