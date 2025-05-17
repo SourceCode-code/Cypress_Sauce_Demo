@@ -63,6 +63,9 @@ jobs:
             echo "output.json not found, skipping stats extraction."
           fi
 
+      - name: Get current date for email subject
+        run: echo "DATE=$(date +'%d-%m-%Y')" >> $GITHUB_ENV
+
       - name: Send test results via email with attachments
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -72,9 +75,9 @@ jobs:
           secure: true
           username: siddhantsourceandcode@gmail.com
           password: jfgt antr xuzj dish
-          to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com
+          to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com, jadhavamol.j2@gmail.com
           from: siddhantsourceandcode@gmail.com
-          subject: "Cypress Test Results - Run #${{ github.run_number }} on $(date +'%d-%m-%Y')"
+          subject: "Cypress Test Results - Run #${{ github.run_number }} on ${{ env.DATE }}"
           attachments: |
             output.json
             mochawesome-report/output.html
