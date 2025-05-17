@@ -1,9 +1,9 @@
 name: Cypress Tests
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '30 3 * * *'  # Runs every day at 9:00 AM IST
+    - cron: '30 3 * * *'  # Runs daily at 9:00 AM IST (UTC +5:30)
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -24,15 +24,25 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies from package.json
-        run: npm ci
+      - name: Install all dependencies from package.json
+        run: npm install
 
-      - name: Run Cypress tests and generate reports
-        run: npm run Run_and_update_Result_sheet
+      - name: Run Cypress tests with mochawesome reporter
+        run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/results,overwrite=true,html=false,json=true
+
+      - name: Generate combined mochawesome report
+        if: always()
+        run: |
+          npx mochawesome-merge cypress/results/*.json -o output.json
+          npx marge output.json --reportDir mochawesome-report --inline
+
+      - name: Generate Excel report
+        if: always()
+        run: node runAllSteps.js
 
       - name: Upload artifacts (JSON, HTML, Excel)
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-artifacts
           path: |
@@ -44,7 +54,7 @@ jobs:
         if: always()
         run: sudo apt-get install -y jq
 
-      - name: Extract test results
+      - name: Extract test result summary
         if: always()
         id: extract_results
         run: |
@@ -75,7 +85,7 @@ jobs:
           subject: "Cypress Test Results - $(date +'%d-%m-%y')"
           attachments: |
             output.json
-            mochawesome-report/mochawesome.html
+            mochawesome-report/*.html
             test_results.xlsx
           body: |
             Dear Team,
