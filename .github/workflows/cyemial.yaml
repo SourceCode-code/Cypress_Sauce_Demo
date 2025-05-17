@@ -29,50 +29,32 @@ jobs:
           rm -rf node_modules package-lock.json
           npm install
 
-      - name: Install Cypress binary
-        run: npx cypress install
+      - name: Run Cypress tests
+        run: npm run Run_Tests
 
-      - name: Run Cypress tests with mochawesome reporter
-        run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/results,overwrite=true,html=false,json=true
-
-      - name: Generate combined Mochawesome report
+      - name: Generate combined Mochawesome report (JSON + HTML)
         if: always()
         run: |
-          npx mochawesome-merge cypress/results/*.json -o cypress/results/output.json
-          npx marge cypress/results/output.json --reportDir cypress/results --inline
+          npm run getMochawesomeReport
+          npm run getHTMLReport
 
-      - name: Generate Excel report if script exists
+      - name: Generate Excel report
         if: always()
-        run: |
-          if [ -f ./generate_excel_report.js ]; then
-            node generate_excel_report.js
-          else
-            echo "generate_excel_report.js not found, skipping."
-          fi
+        run: npm run Run_and_update_Result_sheet
 
-      - name: Upload test artifacts
+      - name: Install jq for JSON parsing
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-artifacts
-          path: |
-            cypress_Task/output.json
-            cypress_Task/mochawesome-report/output.html
-            cypress_Task/Daily_Tracker.xlsx
+        run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Install jq
-        if: always()
-        run: sudo apt-get install -y jq
-
-      - name: Extract test summary stats
+      - name: Extract test summary stats from output.json
         if: always()
         id: extract_results
         run: |
-          if [ -f cypress/results/output.json ]; then
-            total_passed=$(jq '.stats.passes' cypress/results/output.json)
-            total_failed=$(jq '.stats.failures' cypress/results/output.json)
-            total_pending=$(jq '.stats.pending' cypress/results/output.json)
-            failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' cypress/results/output.json)
+          if [ -f output.json ]; then
+            total_passed=$(jq '.stats.passes' output.json)
+            total_failed=$(jq '.stats.failures' output.json)
+            total_pending=$(jq '.stats.pending' output.json)
+            failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' output.json)
             total_tests=$((total_passed + total_failed + total_pending))
 
             echo "TOTAL_TESTS=$total_tests" >> $GITHUB_ENV
@@ -81,10 +63,10 @@ jobs:
             echo "TOTAL_PENDING=$total_pending" >> $GITHUB_ENV
             echo "FAILED_CASES=$failed_cases" >> $GITHUB_ENV
           else
-            echo "cypress/results/output.json not found, skipping stats extraction."
+            echo "output.json not found, skipping stats extraction."
           fi
 
-      - name: Send test results via email
+      - name: Send test results via email with attachments
         if: always()
         uses: dawidd6/action-send-mail@v3
         with:
@@ -94,12 +76,12 @@ jobs:
           username: siddhantsourceandcode@gmail.com
           password: jfgt antr xuzj dish
           to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com
-          from:  siddhantsourceandcode@gmail.com
-          subject: "Cypress Test Results - ${{ github.run_number }} $(date +'%d-%m-%y')"
+          from: siddhantsourceandcode@gmail.com
+          subject: "Cypress Test Results - Run #${{ github.run_number }} on $(date +'%d-%m-%Y')"
           attachments: |
-            cypress_Task/output.json
-            cypress_Task/mochawesome-report/output.html
-            cypress_Task/Daily_Tracker.xlsx
+            output.json
+            mochawesome-report/output.html
+            Daily_Tracker.xlsx
           body: |
             Dear Team,
 
