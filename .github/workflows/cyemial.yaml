@@ -24,8 +24,11 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install all dependencies from package.json
+      - name: Install all dependencies
         run: npm install
+
+      - name: Install Cypress binary
+        run: npx cypress install
 
       - name: Fix Cypress binary permissions
         run: chmod +x ./node_modules/.bin/cypress
@@ -41,7 +44,12 @@ jobs:
 
       - name: Generate Excel report
         if: always()
-        run: node generate_excel_report.js
+        run: |
+          if [ -f ./generate_excel_report.js ]; then
+            node generate_excel_report.js
+          else
+            echo "generate_excel_report.js not found, skipping Excel report generation."
+          fi
 
       - name: Upload test artifacts
         if: always()
@@ -61,17 +69,21 @@ jobs:
         if: always()
         id: extract_results
         run: |
-          total_passed=$(jq '.stats.passes' cypress/results/output.json)
-          total_failed=$(jq '.stats.failures' cypress/results/output.json)
-          total_pending=$(jq '.stats.pending' cypress/results/output.json)
-          failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' cypress/results/output.json)
-          total_tests=$((total_passed + total_failed + total_pending))
+          if [ -f cypress/results/output.json ]; then
+            total_passed=$(jq '.stats.passes' cypress/results/output.json)
+            total_failed=$(jq '.stats.failures' cypress/results/output.json)
+            total_pending=$(jq '.stats.pending' cypress/results/output.json)
+            failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' cypress/results/output.json)
+            total_tests=$((total_passed + total_failed + total_pending))
 
-          echo "TOTAL_TESTS=$total_tests" >> $GITHUB_ENV
-          echo "TOTAL_PASSED=$total_passed" >> $GITHUB_ENV
-          echo "TOTAL_FAILED=$total_failed" >> $GITHUB_ENV
-          echo "TOTAL_PENDING=$total_pending" >> $GITHUB_ENV
-          echo "FAILED_CASES=$failed_cases" >> $GITHUB_ENV
+            echo "TOTAL_TESTS=$total_tests" >> $GITHUB_ENV
+            echo "TOTAL_PASSED=$total_passed" >> $GITHUB_ENV
+            echo "TOTAL_FAILED=$total_failed" >> $GITHUB_ENV
+            echo "TOTAL_PENDING=$total_pending" >> $GITHUB_ENV
+            echo "FAILED_CASES=$failed_cases" >> $GITHUB_ENV
+          else
+            echo "cypress/results/output.json not found, skipping stats extraction."
+          fi
 
       - name: Send test results via email
         if: always()
