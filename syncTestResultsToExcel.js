@@ -24,8 +24,6 @@ async function updateExcelWithDescribeBlocks() {
 
         if (hasPass && !hasFail) {
           status = 'P';
-        } else if (hasPass && hasFail) {
-          status = 'F'; // Keep "F" if there's any fail
         }
 
         testResults.push({ title: describeTitle, status });
@@ -112,7 +110,6 @@ async function updateExcelWithDescribeBlocks() {
     const cell = row.getCell(dateColIndex);
     cell.value = status;
 
-    // Color formatting
     if (status === 'P') {
       cell.fill = {
         type: 'pattern',
@@ -142,8 +139,47 @@ async function updateExcelWithDescribeBlocks() {
     col.width = Math.max(20, col.width || 20);
   });
 
+  // ✅ Add Summary Sheet logic here
+  let summarySheet = workbook.getWorksheet('Summary');
+  if (!summarySheet) {
+    summarySheet = workbook.addWorksheet('Summary');
+    summarySheet.addRow(['Date', 'Passed', 'Failed', 'Total', '% Passed']);
+  }
+
+  const headerValues = worksheet.getRow(1).values;
+  const dateHeaders = headerValues.filter(v => typeof v === 'string' && /^\d{2}-\d{2}-\d{4}$/.test(v));
+
+  for (let i = 0; i < dateHeaders.length; i++) {
+    const date = dateHeaders[i];
+    const colIndex = headerValues.indexOf(date);
+
+    let passed = 0, failed = 0;
+
+    worksheet.eachRow((row, rowNum) => {
+      if (rowNum === 1) return;
+      const status = row.getCell(colIndex).value;
+      if (status === 'P') passed++;
+      else if (status === 'F') failed++;
+    });
+
+    const total = passed + failed;
+    const percent = total === 0 ? 0 : Math.round((passed / total) * 100);
+
+    const summaryRow = summarySheet.findRow(i + 2);
+    if (summaryRow) {
+      summaryRow.getCell(1).value = date;
+      summaryRow.getCell(2).value = passed;
+      summaryRow.getCell(3).value = failed;
+      summaryRow.getCell(4).value = total;
+      summaryRow.getCell(5).value = `${percent}%`;
+      summaryRow.commit();
+    } else {
+      summarySheet.addRow([date, passed, failed, total, `${percent}%`]);
+    }
+  }
+
   await workbook.xlsx.writeFile(excelPath);
-  console.log(`✅ Excel updated for ${todayDate} with ${testResults.length} describe blocks.`);
+  console.log(`📊 Summary sheet updated.`);
 }
 
 updateExcelWithDescribeBlocks().catch(err => {

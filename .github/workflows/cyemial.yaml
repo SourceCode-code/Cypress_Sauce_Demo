@@ -1,0 +1,93 @@
+name: Cypress Tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * *'  # Runs every day at 9:00 AM IST
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies from package.json
+        run: npm ci
+
+      - name: Run Cypress tests and generate reports
+        run: npm run Run_and_update_Result_sheet
+
+      - name: Upload artifacts (JSON, HTML, Excel)
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-artifacts
+          path: |
+            output.json
+            mochawesome-report/*.html
+            test_results.xlsx
+
+      - name: Install jq
+        if: always()
+        run: sudo apt-get install -y jq
+
+      - name: Extract test results
+        if: always()
+        id: extract_results
+        run: |
+          total_passed=$(jq '.stats.passes' output.json)
+          total_failed=$(jq '.stats.failures' output.json)
+          total_pending=$(jq '.stats.pending' output.json)
+          failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' output.json)
+
+          total_tests=$((total_passed + total_failed + total_pending))
+
+          echo "TOTAL_TESTS=$total_tests" >> $GITHUB_ENV
+          echo "TOTAL_PASSED=$total_passed" >> $GITHUB_ENV
+          echo "TOTAL_FAILED=$total_failed" >> $GITHUB_ENV
+          echo "TOTAL_PENDING=$total_pending" >> $GITHUB_ENV
+          echo "FAILED_CASES=$failed_cases" >> $GITHUB_ENV
+
+      - name: Send test results via email
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.GMAIL_USERNAME }}
+          password: ${{ secrets.GMAIL_PASSWORD }}
+          to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com
+          from: ${{ secrets.GMAIL_USERNAME }}
+          subject: "Cypress Test Results - $(date +'%d-%m-%y')"
+          attachments: |
+            output.json
+            mochawesome-report/mochawesome.html
+            test_results.xlsx
+          body: |
+            Dear Team,
+
+            Here are the Cypress test results from the latest run:
+            - Total Run Testcases: ${{ env.TOTAL_TESTS }}
+            - Total Passed: ${{ env.TOTAL_PASSED }}
+            - Total Failed: ${{ env.TOTAL_FAILED }}
+            - Total Pending: ${{ env.TOTAL_PENDING }}
+            - Failed Test Cases: ${{ env.FAILED_CASES }}
+
+            Please check the attached report and Excel file for detailed information.
+
+            Best regards,
+            Your Automation Team
