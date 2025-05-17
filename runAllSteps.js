@@ -14,6 +14,6 @@ runCommand('node clean_mochawesome.js');
 runCommand('npm run clean_report_files');
 runCommand('npm run Run_Tests', true); // allow test failure
 runCommand('npm run getMochawesomeReport');
-runCommand('node syncTestResultsToExcel.js');
 runCommand('npm run getHTMLReport');
+runCommand('node syncTestResultsToExcel.js');
 console.log('✅ All steps attempted.');

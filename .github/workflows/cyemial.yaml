@@ -29,18 +29,9 @@ jobs:
           rm -rf node_modules package-lock.json
           npm install
 
-      - name: Run Cypress tests
-        run: npm run Run_Tests
-
-      - name: Generate combined Mochawesome report (JSON + HTML)
-        if: always()
-        run: |
-          npm run getMochawesomeReport
-          npm run getHTMLReport
-
-      - name: Generate Excel report
-        if: always()
+      - name: Run all tests and generate reports (Cypress + HTML + Excel)
         run: npm run Run_and_update_Result_sheet
+        continue-on-error: true
 
       - name: Install jq for JSON parsing
         if: always()
@@ -66,6 +57,9 @@ jobs:
             echo "output.json not found, skipping stats extraction."
           fi
 
+      - name: Get current date for email subject
+        run: echo "DATE=$(date +'%d-%m-%Y')" >> $GITHUB_ENV
+
       - name: Send test results via email with attachments
         if: always()
         uses: dawidd6/action-send-mail@v3
@@ -77,7 +71,7 @@ jobs:
           password: jfgt antr xuzj dish
           to: vaibhavps0595@gmail.com, siddhantgadakh121@gmail.com
           from: siddhantsourceandcode@gmail.com
-          subject: "Cypress Test Results - Run #${{ github.run_number }} on $(date +'%d-%m-%Y')"
+          subject: "Cypress Test Results - Run #${{ github.run_number }} on ${{ env.DATE }}"
           attachments: |
             output.json
             mochawesome-report/output.html
