@@ -10,7 +10,7 @@
     "Run_Tests_Cart_Testcases": "npx cypress run --headed--spec cypress/e2e/Cart_Testcases/*",
     "Run_Tests_Checkout_Testcases": "npx cypress run --headed--spec cypress/e2e/Checkout_Testcases/*",
     "Run_Tests_Regression_Testcases": "npx cypress run --headed --spec cypress/e2e/Regression_e2e_Flow/*",
-    "getMochawesomeReport": "npx mochawesome-merge cypress\\results\\*.json -o output.json",
+    "getMochawesomeReport": "npx mochawesome-merge cypress/results/*.json -o output.json",
     "clean:reports": "node cleanupReports.js",
     "clean:output": "node cleanupOutput.js",
     "clean_report_files": "npm run clean:reports && npm run clean:output",
