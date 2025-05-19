@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-05-16T18:34:12.127Z",
-    "end": "2025-05-16T18:34:20.598Z",
-    "duration": 8471,
+    "start": "2025-05-19T17:39:36.910Z",
+    "end": "2025-05-19T17:39:41.620Z",
+    "duration": 4710,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a6e40c1d-5632-4266-a8e2-0dd0e27a1267",
+      "uuid": "e90c7d06-7577-4d4b-b7da-c5e717dc8716",
       "title": "",
       "fullFile": "cypress\\e2e\\Login_Testcases\\03_Verify_Lockout_user_failed_login.cy.js",
       "file": "cypress\\e2e\\Login_Testcases\\03_Verify_Lockout_user_failed_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2e5cdc60-29ac-4545-89e4-8e6f1c5b34eb",
+          "uuid": "422e4590-21bc-4ebb-bbee-a2f74f994135",
           "title": "03_Verify_Lockout_user_failed_login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "03_Verify_Lockout_user_failed_login",
               "fullTitle": "03_Verify_Lockout_user_failed_login 03_Verify_Lockout_user_failed_login",
               "timedOut": null,
-              "duration": 3772,
+              "duration": 2235,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(Locket_out_User);\n//verify the home is visble \n_navigationPage.NavigationPage.verifyLoginErrorPopup(ErrorText);",
               "err": {},
-              "uuid": "9cabec0a-6c82-4563-a284-f85ae9d2a2fa",
-              "parentUUID": "2e5cdc60-29ac-4545-89e4-8e6f1c5b34eb",
+              "uuid": "29a39232-3ac7-4fb1-a6a2-5473acd13adf",
+              "parentUUID": "422e4590-21bc-4ebb-bbee-a2f74f994135",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9cabec0a-6c82-4563-a284-f85ae9d2a2fa"
+            "29a39232-3ac7-4fb1-a6a2-5473acd13adf"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3772,
+          "duration": 2235,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -4,6 +4,7 @@ const ExcelJS = require('exceljs');
 const reportPath = './output.json';
 const excelPath = './Daily_Tracker.xlsx';
 const todayDate = new Date().toLocaleDateString('en-GB').replace(/\//g, '-'); // dd-mm-yyyy
+const MAX_DAYS = 60;
 
 async function updateExcelWithDescribeBlocks() {
   if (!fs.existsSync(reportPath)) {
@@ -54,7 +55,7 @@ async function updateExcelWithDescribeBlocks() {
 
   if (fs.existsSync(excelPath)) {
     await workbook.xlsx.readFile(excelPath);
-    worksheet = workbook.getWorksheet(1);
+    worksheet = workbook.getWorksheet('TestResults');
     if (!worksheet) {
       worksheet = workbook.addWorksheet('TestResults');
       worksheet.addRow(['Test Case Title']);
@@ -67,6 +68,17 @@ async function updateExcelWithDescribeBlocks() {
   const headerRow = worksheet.getRow(1);
   let dateColIndex = headerRow.values.indexOf(todayDate);
 
+  // Clean up old columns if exceeding 60 date columns
+  const allHeaders = headerRow.values;
+  const dateHeaders = allHeaders.filter(v => typeof v === 'string' && /^\d{2}-\d{2}-\d{4}$/.test(v));
+  if (dateHeaders.length >= MAX_DAYS) {
+    const oldestDate = dateHeaders[0];
+    const oldestColIndex = headerRow.values.indexOf(oldestDate);
+    worksheet.spliceColumns(oldestColIndex, 1);
+    console.log(`🗑️ Removed oldest date column: ${oldestDate}`);
+  }
+
+  dateColIndex = headerRow.values.indexOf(todayDate);
   if (dateColIndex === -1) {
     dateColIndex = headerRow.cellCount + 1;
     headerRow.getCell(dateColIndex).value = todayDate;
@@ -139,20 +151,18 @@ async function updateExcelWithDescribeBlocks() {
     col.width = Math.max(20, col.width || 20);
   });
 
-  // ✅ Add Summary Sheet logic here
+  // ✅ Update or create Summary Sheet
   let summarySheet = workbook.getWorksheet('Summary');
   if (!summarySheet) {
     summarySheet = workbook.addWorksheet('Summary');
     summarySheet.addRow(['Date', 'Passed', 'Failed', 'Total', '% Passed']);
   }
 
-  const headerValues = worksheet.getRow(1).values;
-  const dateHeaders = headerValues.filter(v => typeof v === 'string' && /^\d{2}-\d{2}-\d{4}$/.test(v));
+  const updatedHeaderValues = worksheet.getRow(1).values;
+  const updatedDateHeaders = updatedHeaderValues.filter(v => typeof v === 'string' && /^\d{2}-\d{2}-\d{4}$/.test(v));
 
-  for (let i = 0; i < dateHeaders.length; i++) {
-    const date = dateHeaders[i];
-    const colIndex = headerValues.indexOf(date);
-
+  updatedDateHeaders.forEach((date, i) => {
+    const colIndex = updatedHeaderValues.indexOf(date);
     let passed = 0, failed = 0;
 
     worksheet.eachRow((row, rowNum) => {
@@ -165,21 +175,17 @@ async function updateExcelWithDescribeBlocks() {
     const total = passed + failed;
     const percent = total === 0 ? 0 : Math.round((passed / total) * 100);
 
-    const summaryRow = summarySheet.findRow(i + 2);
-    if (summaryRow) {
-      summaryRow.getCell(1).value = date;
-      summaryRow.getCell(2).value = passed;
-      summaryRow.getCell(3).value = failed;
-      summaryRow.getCell(4).value = total;
-      summaryRow.getCell(5).value = `${percent}%`;
-      summaryRow.commit();
-    } else {
-      summarySheet.addRow([date, passed, failed, total, `${percent}%`]);
-    }
-  }
+    const summaryRow = summarySheet.getRow(i + 2);
+    summaryRow.getCell(1).value = date;
+    summaryRow.getCell(2).value = passed;
+    summaryRow.getCell(3).value = failed;
+    summaryRow.getCell(4).value = total;
+    summaryRow.getCell(5).value = `${percent}%`;
+    summaryRow.commit();
+  });
 
   await workbook.xlsx.writeFile(excelPath);
-  console.log(`📊 Summary sheet updated.`);
+  console.log(`📊 Excel updated with today's results and 60-day limit maintained.`);
 }
 
 updateExcelWithDescribeBlocks().catch(err => {
