@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-05-19T17:40:09.315Z",
-    "end": "2025-05-19T17:40:18.373Z",
-    "duration": 9058,
+    "start": "2025-05-22T04:23:43.095Z",
+    "end": "2025-05-22T04:23:52.702Z",
+    "duration": 9607,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "388859c1-b549-4542-b34d-0f87a1bfa26e",
+      "uuid": "16b24d70-c5b0-4886-8671-0d08c3c58a37",
       "title": "",
       "fullFile": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
       "file": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "affa481d-b715-4e68-94e5-76162b961730",
+          "uuid": "52a20366-3545-46fb-8289-489308266541",
           "title": "06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
               "fullTitle": "06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js 03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
               "timedOut": null,
-              "duration": 6507,
+              "duration": 6628,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on cancel button\n_CheckoutPage.checkout_page.clickOnCancelButton();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);",
               "err": {},
-              "uuid": "fc6a9493-b065-4a41-b5ad-fbed461a77c3",
-              "parentUUID": "affa481d-b715-4e68-94e5-76162b961730",
+              "uuid": "8c398373-d45f-4359-9fc1-eba30823bc3c",
+              "parentUUID": "52a20366-3545-46fb-8289-489308266541",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fc6a9493-b065-4a41-b5ad-fbed461a77c3"
+            "8c398373-d45f-4359-9fc1-eba30823bc3c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6507,
+          "duration": 6628,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
