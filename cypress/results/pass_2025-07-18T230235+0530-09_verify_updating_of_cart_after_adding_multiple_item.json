@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-05-22T04:23:09.271Z",
-    "end": "2025-05-22T04:23:16.874Z",
-    "duration": 7603,
+    "start": "2025-07-18T17:32:31.680Z",
+    "end": "2025-07-18T17:32:35.962Z",
+    "duration": 4282,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "24209cba-0273-4d9c-a59b-e3a4a1a2f892",
+      "uuid": "f5ea6382-2522-4ec6-a451-b8c34f93032b",
       "title": "",
       "fullFile": "cypress\\e2e\\Cart_Testcases\\09_verify_updating_of_cart_after_adding_multiple_item.cy.js",
       "file": "cypress\\e2e\\Cart_Testcases\\09_verify_updating_of_cart_after_adding_multiple_item.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "446322d8-e57e-4886-9107-a9d3a20678bd",
+          "uuid": "bbbf6906-39ca-4a2b-a7bb-a7adb2b17a94",
           "title": "09_verify_updating_of_cart_after_adding_multiple_item",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "03_verify_updating_of_cart_after_adding_multiple_item",
               "fullTitle": "09_verify_updating_of_cart_after_adding_multiple_item 03_verify_updating_of_cart_after_adding_multiple_item",
               "timedOut": null,
-              "duration": 4822,
+              "duration": 3093,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\ncy.wait(1000);\n//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bike_light);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify bike light  item not  present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bagpack);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//verify no item present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);",
               "err": {},
-              "uuid": "501a41c2-a208-4f58-8ead-73c2ddd14d2c",
-              "parentUUID": "446322d8-e57e-4886-9107-a9d3a20678bd",
+              "uuid": "be236a85-c9db-4815-8246-12a553d8d059",
+              "parentUUID": "bbbf6906-39ca-4a2b-a7bb-a7adb2b17a94",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "501a41c2-a208-4f58-8ead-73c2ddd14d2c"
+            "be236a85-c9db-4815-8246-12a553d8d059"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4822,
+          "duration": 3093,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

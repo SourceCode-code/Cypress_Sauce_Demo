@@ -4,10 +4,17 @@ import { cartpage } from "../../support/pageObjects/CartPage"
 import { checkout_page } from "../../support/pageObjects/CheckoutPage"
 import { Datacells } from "../../support/interface"
 import { Common_Locators } from "../../support/Locators/Common_Locators"
+import { generateRandomData } from "../../support/pageObjects/GenerateRandomData"
 
 let User
-let Bike_light, First_Name, Last_Name, Zip_Code
+let Bike_light
+
 let checkout_Info_Parameter
+
+let First_Name = generateRandomData.genraterandomString(5, {includeUppercase:true,includeLowercase :true,includeNumbers :false,includeSymbols : false, excludeSimilar: true });
+let Last_Name = generateRandomData.genraterandomString(5, {includeUppercase:true,includeLowercase :true,includeNumbers :false,includeSymbols : false, excludeSimilar: true });  
+let Zip_Code = generateRandomData.genraterandomString(5, {includeUppercase:false,includeLowercase :false,includeNumbers :true,includeSymbols : false, excludeSimilar: true });  
+
 describe("06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js", function () {
 
     beforeEach(function () {
@@ -16,9 +23,9 @@ describe("06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js", func
             User = this.data.User
             Bike_light = this.data.Bike_light
             checkout_Info_Parameter = {
-                [Common_Locators.Checkout_page_locators.firstname]: this.data.First_Name,
-                [Common_Locators.Checkout_page_locators.lastname]: this.data.Last_Name,
-                [Common_Locators.Checkout_page_locators.zip]: this.data.Zip_Code,
+                [Common_Locators.Checkout_page_locators.firstname]:First_Name,
+                [Common_Locators.Checkout_page_locators.lastname]: Last_Name,
+                [Common_Locators.Checkout_page_locators.zip]: Zip_Code,
             }
 
 

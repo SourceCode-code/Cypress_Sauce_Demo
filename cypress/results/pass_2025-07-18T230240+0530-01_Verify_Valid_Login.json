@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-05-22T04:23:55.866Z",
-    "end": "2025-05-22T04:24:01.307Z",
-    "duration": 5441,
+    "start": "2025-07-18T17:32:37.845Z",
+    "end": "2025-07-18T17:32:40.158Z",
+    "duration": 2313,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5917b053-8c9c-4fd1-a90e-41d6f0279e23",
+      "uuid": "935479f2-b0f4-47ac-a240-1665bd23f1ba",
       "title": "",
       "fullFile": "cypress\\e2e\\Login_Testcases\\01_Verify_Valid_Login.cy.js",
       "file": "cypress\\e2e\\Login_Testcases\\01_Verify_Valid_Login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3caf3f98-6881-4483-b64f-8b98723daef5",
+          "uuid": "a4bc946d-23e5-43cd-bcc8-d08c66a44439",
           "title": "01_Verify_Valid_Login",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "01_Verify_Valid_Login",
               "fullTitle": "01_Verify_Valid_Login 01_Verify_Valid_Login",
               "timedOut": null,
-              "duration": 2736,
+              "duration": 1198,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(User);\n//verify the home is visble \n_Homepage.homepage.verifyHomepage();",
               "err": {},
-              "uuid": "f7543bda-2e9f-42d2-87ec-f5141698470b",
-              "parentUUID": "3caf3f98-6881-4483-b64f-8b98723daef5",
+              "uuid": "ac7f179a-83d9-4e46-be0b-270dfbb846e8",
+              "parentUUID": "a4bc946d-23e5-43cd-bcc8-d08c66a44439",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f7543bda-2e9f-42d2-87ec-f5141698470b"
+            "ac7f179a-83d9-4e46-be0b-270dfbb846e8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2736,
+          "duration": 1198,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

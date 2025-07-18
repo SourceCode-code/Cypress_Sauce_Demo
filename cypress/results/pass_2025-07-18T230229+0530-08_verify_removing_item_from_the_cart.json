@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-05-22T04:22:59.820Z",
-    "end": "2025-05-22T04:23:06.087Z",
-    "duration": 6267,
+    "start": "2025-07-18T17:32:26.714Z",
+    "end": "2025-07-18T17:32:29.817Z",
+    "duration": 3103,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "709777c1-9174-488e-bcd1-02dfc546c983",
+      "uuid": "c239bdfa-7995-4217-a398-5172adb6c392",
       "title": "",
       "fullFile": "cypress\\e2e\\Cart_Testcases\\08_verify_removing_item_from_the_cart.cy.js",
       "file": "cypress\\e2e\\Cart_Testcases\\08_verify_removing_item_from_the_cart.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d999d9a0-d403-4693-b5b3-ffe3c629615a",
+          "uuid": "a5b25287-1f97-49d2-b35a-f72b124ba396",
           "title": "08_verify_removing_item_from_the_cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "02_verify_removing_item_from_the_cart",
               "fullTitle": "08_verify_removing_item_from_the_cart 02_verify_removing_item_from_the_cart",
               "timedOut": null,
-              "duration": 3746,
+              "duration": 1933,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//verify no item present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);",
               "err": {},
-              "uuid": "994c27fa-1c07-48b6-bcfc-ce2c0a1111d4",
-              "parentUUID": "d999d9a0-d403-4693-b5b3-ffe3c629615a",
+              "uuid": "7fd5ef47-51bc-43fe-b800-e91ddc19fac8",
+              "parentUUID": "a5b25287-1f97-49d2-b35a-f72b124ba396",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "994c27fa-1c07-48b6-bcfc-ce2c0a1111d4"
+            "7fd5ef47-51bc-43fe-b800-e91ddc19fac8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3746,
+          "duration": 1933,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

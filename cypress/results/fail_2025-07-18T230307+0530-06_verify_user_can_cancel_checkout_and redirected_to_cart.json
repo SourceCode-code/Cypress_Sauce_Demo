@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-07-18T17:33:07.560Z",
+    "end": "2025-07-18T17:33:07.941Z",
+    "duration": 381,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b3b65b60-0073-4d24-81a0-de53d6f0f8a4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+      "file": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 186,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > generateRandomData is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "ReferenceError: The following error originated from your test code, not from Cypress.\n\n  > generateRandomData is not defined\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at eval (webpack://cypress_task/./cypress/e2e/Checkout_Testcases/06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js:13:17)\n    at eval (http://localhost:51821/__cypress/tests?p=cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and%20redirected_to_cart.cy.js:758:3)\n    at eval (http://localhost:51821/__cypress/tests?p=cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and%20redirected_to_cart.cy.js:760:12)\n    at eval (<anonymous>)\n    at <unknown> (http://localhost:51821/__cypress/runner/cypress_runner.js:113275:23)\n    at tryCatcher (http://localhost:51821/__cypress/runner/cypress_runner.js:1777:23)\n    at Object.gotValue (http://localhost:51821/__cypress/runner/cypress_runner.js:6446:18)\n    at Object.gotAccum (http://localhost:51821/__cypress/runner/cypress_runner.js:6435:25)\n    at Object.tryCatcher (http://localhost:51821/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51821/__cypress/runner/cypress_runner.js:1489:31)",
+            "diff": null
+          },
+          "uuid": "d483d54b-67ab-4258-a977-6b063097bd96",
+          "parentUUID": "b3b65b60-0073-4d24-81a0-de53d6f0f8a4",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "d483d54b-67ab-4258-a977-6b063097bd96"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 186,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "reportFilename": "[status]_[datetime]-[name]",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
