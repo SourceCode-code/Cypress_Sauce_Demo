@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-08-02T15:17:50.549Z",
-    "end": "2025-08-02T15:17:55.494Z",
-    "duration": 4945,
+    "start": "2025-08-02T17:53:48.004Z",
+    "end": "2025-08-02T17:53:52.285Z",
+    "duration": 4281,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "71ef77a0-d920-476a-86e7-f474ad9f9fb7",
+      "uuid": "1e07c2df-9b84-4675-9286-a0da22d30834",
       "title": "",
       "fullFile": "cypress\\e2e\\Checkout_Testcases\\05_verify_checkout_with_missing_firstname_fails.cy.js",
       "file": "cypress\\e2e\\Checkout_Testcases\\05_verify_checkout_with_missing_firstname_fails.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fd2b3e1f-73b6-44ea-a5e4-9c9cbabf7624",
+          "uuid": "2137e16b-7454-45d7-8103-f7daa84c682e",
           "title": "05_verify_checkout_with_missing_firstname_fails.cy.js",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "02_verify_checkout_with_missing_firstname_fails.cy.js",
               "fullTitle": "05_verify_checkout_with_missing_firstname_fails.cy.js 02_verify_checkout_with_missing_firstname_fails.cy.js",
               "timedOut": null,
-              "duration": 3897,
+              "duration": 3217,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_cartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_cartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_cartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify error is displayed \n_CheckoutPage.checkout_page.VerifyError_Pop_up();\n//verify Item Still added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify still on checkout page \n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();",
               "err": {},
-              "uuid": "f2b5a3b9-fb78-4f59-a9d6-2523d2aabbd5",
-              "parentUUID": "fd2b3e1f-73b6-44ea-a5e4-9c9cbabf7624",
+              "uuid": "8f690217-30d8-4c7f-9fa3-b5f45faeb0e3",
+              "parentUUID": "2137e16b-7454-45d7-8103-f7daa84c682e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f2b5a3b9-fb78-4f59-a9d6-2523d2aabbd5"
+            "8f690217-30d8-4c7f-9fa3-b5f45faeb0e3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3897,
+          "duration": 3217,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

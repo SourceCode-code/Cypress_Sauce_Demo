@@ -48,10 +48,10 @@ jobs:
         id: extract_results
         run: |
           if [ -f output.json ]; then
-            total_passed=$(jq '.stats.passes' output.json)
-            total_failed=$(jq '.stats.failures' output.json)
-            total_pending=$(jq '.stats.pending' output.json)
-            failed_cases=$(jq -r '[.results[] | .suites[].tests[] | select(.state == "failed") | .title] | join(", ")' output.json)
+            total_passed=$(jq '[.results[].suites[] | .. | objects | select(has("state")) | select(.state == "passed")] | length' output.json)
+            total_failed=$(jq '[.results[].suites[] | .. | objects | select(has("state")) | select(.state == "failed")] | length' output.json)
+            total_pending=$(jq '[.results[].suites[] | .. | objects | select(has("state")) | select(.state == "pending")] | length' output.json)
+            failed_cases=$(jq -r '[.results[].suites[] | .. | objects | select(has("state")) | select(.state == "failed") | .title] | join(", ")' output.json)
             total_tests=$((total_passed + total_failed + total_pending))
 
             echo "TOTAL_TESTS=$total_tests" >> $GITHUB_ENV

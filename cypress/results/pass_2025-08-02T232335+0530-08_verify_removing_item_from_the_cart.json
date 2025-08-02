@@ -2,15 +2,15 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
-    "pending": 1,
+    "passes": 1,
+    "pending": 0,
     "failures": 0,
-    "start": "2025-08-02T15:37:07.281Z",
-    "end": "2025-08-02T15:37:07.300Z",
-    "duration": 19,
+    "start": "2025-08-02T17:53:32.549Z",
+    "end": "2025-08-02T17:53:35.161Z",
+    "duration": 2612,
     "testsRegistered": 1,
-    "passPercent": null,
-    "pendingPercent": 100,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "39464615-99a9-426f-8bab-03ffcee413c1",
+      "uuid": "6034cea7-da80-4240-9aee-01bb0214d927",
       "title": "",
       "fullFile": "cypress\\e2e\\Cart_Testcases\\08_verify_removing_item_from_the_cart.cy.js",
       "file": "cypress\\e2e\\Cart_Testcases\\08_verify_removing_item_from_the_cart.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "89f3e6e3-adc0-4899-b981-a4b94a6a51c9",
+          "uuid": "1dbde4d7-2ad9-4054-9572-17fa76a29476",
           "title": "08_verify_removing_item_from_the_cart",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "02_verify_removing_item_from_the_cart",
               "fullTitle": "08_verify_removing_item_from_the_cart 02_verify_removing_item_from_the_cart",
               "timedOut": null,
-              "duration": 0,
-              "state": "pending",
-              "speed": null,
-              "pass": false,
+              "duration": 1739,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
               "code": "//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_cartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_cartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//remove the item form the container \n_cartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//verify no item present in the cart\n_cartPage.cartpage.VerifyAddedItemtoCart(Bike_light);",
               "err": {},
-              "uuid": "6c42c867-e89d-4ee2-a645-51eda6b2c5f2",
-              "parentUUID": "89f3e6e3-adc0-4899-b981-a4b94a6a51c9",
+              "uuid": "4d19f8b3-2f74-46a8-adde-f7225237f955",
+              "parentUUID": "1dbde4d7-2ad9-4054-9572-17fa76a29476",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [],
-          "pending": [
-            "6c42c867-e89d-4ee2-a645-51eda6b2c5f2"
+          "passes": [
+            "4d19f8b3-2f74-46a8-adde-f7225237f955"
           ],
+          "failures": [],
+          "pending": [],
           "skipped": [],
-          "duration": 0,
+          "duration": 1739,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
