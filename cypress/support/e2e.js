@@ -18,8 +18,26 @@ import './commands'
 ///<reference types="cypress"/>
 //handle alert 
 Cypress.on('window:alert', (alertText) => {
-    Cypress.log({
-      name: 'window:alert',
-      message: alertText
-    });
+  Cypress.log({
+    name: 'window:alert',
+    message: alertText
   });
+});
+
+const grep = Cypress.env('grep'); // get --env grep value
+
+before(function() {
+  if (grep) {
+    cy.log(`Filtering tests by tag: ${grep}`);
+  }
+});
+
+beforeEach(function() {
+  if (grep) {
+    const testTitle = Cypress.currentTest.title;
+    if (!testTitle.includes(grep)) {
+      this.skip();
+    }
+  }
+});
+

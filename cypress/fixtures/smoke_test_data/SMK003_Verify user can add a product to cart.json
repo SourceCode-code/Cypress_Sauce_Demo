@@ -1,0 +1,6 @@
+{
+    "TestCase_Name":"SMK003_Verify user can add a product to cart",
+    "TestCase_ID":"SMK003",
+    "User":"standard_user",
+    "Bagpack":"Sauce Labs Backpack"
+}

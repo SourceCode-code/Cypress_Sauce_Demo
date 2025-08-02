@@ -1,0 +1,6 @@
+{
+    "TestCase_Name":"SMK002_Verify product list loads after login",
+    "TestCase_ID":"SMK002",
+    "User":"standard_user",
+    "product_length": 6
+}

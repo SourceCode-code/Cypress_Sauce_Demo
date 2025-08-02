@@ -16,7 +16,10 @@
     "clean_report_files": "npm run clean:reports && npm run clean:output",
     "getHTMLReport": "npx marge output.json",
     "generate_report": "npm run getMochawesomeReport && npm run getHTMLReport",
-    "Run_and_update_Result_sheet": "node runAllSteps.js"
+    "Run_and_update_Result_sheet": "node runAllSteps.js",
+    "Run_parallel_Smoke": "concurrently \"cypress run --spec=\\\"cypress/e2e/Smoke_Suit/SMK001_Verify user can log in with valid credentials.cy.js\\\"\" \"cypress run --spec=\\\"cypress/e2e/Smoke_Suit/SMK002_Verify product list loads after login.cy.js\\\"\" \"cypress run --spec=\\\"cypress/e2e/Smoke_Suit/SMK003_Verify user can add a product to cart.cy.js\\\"\"",
+    "parallel_node_smoke": "node run-parallel-cypress.js",
+    "grep-run": "node run-grep-cypress.js"
   },
   "keywords": [],
   "author": "",
@@ -32,7 +35,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
+    "concurrently": "^9.2.0",
     "cypress": "^14.5.2"
   }
 }

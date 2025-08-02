@@ -1,6 +1,6 @@
 import { NavigationPage } from "../../support/pageObjects/navigationPage"
 import { homepage } from "../../support/pageObjects/Homepage"
-import { cartpage } from "../../support/pageObjects/CartPage"
+import { cartpage } from "../../support/pageObjects/cartPage"
 
 let User
 let Bike_light

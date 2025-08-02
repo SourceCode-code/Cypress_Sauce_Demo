@@ -72,5 +72,21 @@ class Homepage {
         cy.get(Common_Locators.LogOut.Logout).click({ force: true })
         cy.log(`Logged Out`)
     }
+
+    //verify the products page is opened and product are displayed
+    verifyProductsPage() {
+        cy.url().should("contains", "/inventory.html")
+        cy.get(Common_Locators.Home_Page_Locators.Product_Container).should("be.visible")
+        cy.log("Products page is opened and products are displayed");
+    }
+    
+    //verify minimum 6 products are displayed
+    verifyMinimumProductsDisplayed(minCount = 6) {
+        cy.wait(1000); // Wait for products to load
+        cy.get(Common_Locators.Home_Page_Locators.Product_Container).should("be.visible");
+        // Check if the number of products displayed is greater than or equal to minCount
+        cy.get(Common_Locators.Home_Page_Locators.Product_Container).should("have.length.gte", minCount);
+        cy.log(`Verified that at least ${minCount} products are displayed`);
+    }
 }
 export const homepage = new Homepage();

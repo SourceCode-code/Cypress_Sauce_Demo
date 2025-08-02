@@ -1,8 +1,7 @@
 import { NavigationPage } from "../../support/pageObjects/navigationPage"
 import { homepage } from "../../support/pageObjects/Homepage"
-import { cartpage } from "../../support/pageObjects/CartPage"
+import { cartpage } from "../../support/pageObjects/cartPage"
 import { checkout_page } from "../../support/pageObjects/CheckoutPage"
-import { Datacells } from "../../support/interface"
 import { Common_Locators } from "../../support/Locators/Common_Locators"
 import { generateRandomData } from "../../support/pageObjects/GenerateRandomData"
 

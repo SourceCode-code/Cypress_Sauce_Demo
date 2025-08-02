@@ -120,26 +120,38 @@ async function updateExcelWithDescribeBlocks() {
     }
 
     const cell = row.getCell(dateColIndex);
-    cell.value = status;
-
+    // Set cell value and color based on status
     if (status === 'P') {
+      cell.value = 'P';
       cell.fill = {
         type: 'pattern',
         pattern: 'solid',
-        fgColor: { argb: 'C6EFCE' },
+        fgColor: { argb: 'C6EFCE' }, // Green
       };
       cell.font = {
-        color: { argb: '006100' },
+        color: { argb: '006100' }, // Green text
+        bold: true,
+      };
+    } else if (status === 'F') {
+      cell.value = 'F';
+      cell.fill = {
+        type: 'pattern',
+        pattern: 'solid',
+        fgColor: { argb: 'FFC7CE' }, // Red
+      };
+      cell.font = {
+        color: { argb: '9C0006' }, // Red text
         bold: true,
       };
     } else {
+      cell.value = status === 'S' ? 'S' : 'N/A'; // S for skipped, N/A for others
       cell.fill = {
         type: 'pattern',
         pattern: 'solid',
-        fgColor: { argb: 'FFC7CE' },
+        fgColor: { argb: 'D9D9D9' }, // Grey
       };
       cell.font = {
-        color: { argb: '9C0006' },
+        color: { argb: '7F7F7F' }, // Grey text
         bold: true,
       };
     }
@@ -155,7 +167,21 @@ async function updateExcelWithDescribeBlocks() {
   let summarySheet = workbook.getWorksheet('Summary');
   if (!summarySheet) {
     summarySheet = workbook.addWorksheet('Summary');
-    summarySheet.addRow(['Date', 'Passed', 'Failed', 'Total', '% Passed']);
+  }
+
+  // Ensure header row is present
+  const expectedHeaders = ['Date', 'Passed', 'Failed', 'Total', '% Passed'];
+  const summaryHeaderRow = summarySheet.getRow(1);
+  let headerNeedsUpdate = false;
+  for (let i = 0; i < expectedHeaders.length; i++) {
+    if (summaryHeaderRow.getCell(i + 1).value !== expectedHeaders[i]) {
+      headerNeedsUpdate = true;
+      break;
+    }
+  }
+  if (headerNeedsUpdate) {
+    summaryHeaderRow.values = expectedHeaders;
+    summaryHeaderRow.commit();
   }
 
   const updatedHeaderValues = worksheet.getRow(1).values;
