@@ -1,6 +1,6 @@
 import { NavigationPage } from "../../support/pageObjects/navigationPage"
 import { homepage } from "../../support/pageObjects/Homepage"
-import { cartpage } from "../../support/pageObjects/cartPage"
+import { cartpage } from "../../support/pageObjects/CartPage"
 import { checkout_page } from "../../support/pageObjects/CheckoutPage"
 import { Common_Locators } from "../../support/Locators/Common_Locators"
 import { generateRandomData } from "../../support/pageObjects/GenerateRandomData"
