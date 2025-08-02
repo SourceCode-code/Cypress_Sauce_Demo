@@ -2,7 +2,7 @@ import { NavigationPage } from "../../support/pageObjects/navigationPage"
 import { homepage } from "../../support/pageObjects/Homepage"
 
 let User
-describe(" SMK001_Verify user can log in with valid credentials  @smoke", function () {
+describe("SMK001_Verify user can log in with valid credentials", function () {
 
 
     beforeEach(function () {
@@ -18,7 +18,7 @@ describe(" SMK001_Verify user can log in with valid credentials  @smoke", functi
 
     })
 
-    it("  SMK001_Verify user can log in with valid credentials @smoke", function () {
+    it("SMK001_Verify user can log in with valid credentials", function () {
         //login with valid user
         NavigationPage.loginWithCredentials(User)
         //verify the home is visble 

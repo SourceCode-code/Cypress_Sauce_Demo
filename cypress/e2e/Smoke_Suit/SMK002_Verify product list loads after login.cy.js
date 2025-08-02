@@ -2,7 +2,7 @@ import { NavigationPage } from "../../support/pageObjects/navigationPage"
 import { homepage } from "../../support/pageObjects/Homepage"
 
 let User
-describe("@smoke SMK002_Verify product list loads after login", function () {
+describe("SMK002_Verify product list loads after login", function () {
 
 
     beforeEach(function () {
@@ -18,7 +18,7 @@ describe("@smoke SMK002_Verify product list loads after login", function () {
 
     })
 
-    it("SMK002_Verify product list loads after login @smoke", function () {
+    it("SMK002_Verify product list loads after login", function () {
         //login with valid user
         NavigationPage.loginWithCredentials(User)
         //verify the home is visble 

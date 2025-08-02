@@ -4,7 +4,7 @@ import { cartpage } from "../../support/pageObjects/CartPage"
 
 let User
 let Bagpack
-describe("@smoke SMK003_Verify user can add a product to cart", function () {
+describe("SMK003_Verify user can add a product to cart", function () {
 
 
     beforeEach(function () {
@@ -25,7 +25,7 @@ describe("@smoke SMK003_Verify user can add a product to cart", function () {
         })
     })
 
-    it("SMK003_Verify user can add a product to cart @smoke", function () {
+    it("SMK003_Verify user can add a product to cart", function () {
 
         //add Sauce Labs Backpack in the cart
         homepage.AddingItemtoCart(Bagpack)
