@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const rerunFailed = require("cypress-rerun-failed-specs-sid");
 
 module.exports = defineConfig({
   reporter: "mochawesome",
@@ -33,7 +34,11 @@ module.exports = defineConfig({
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      on('task', {})
+      on("task", {});
+
+      rerunFailed(on, config)
+      return config;
+
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
   },

@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-12-19T10:38:51.529Z",
+    "end": "2025-12-19T10:38:54.458Z",
+    "duration": 2929,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ce7669f7-1370-4cf7-af26-3d2d3f7dbe9a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK002_Verify product list loads after login.cy.js",
+      "file": "cypress\\e2e\\Smoke_Suit\\SMK002_Verify product list loads after login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5e626ca8-05b0-42e9-9b0d-08a276d3e428",
+          "title": "SMK002_Verify product list loads after login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SMK002_Verify product list loads after login",
+              "fullTitle": "SMK002_Verify product list loads after login SMK002_Verify product list loads after login",
+              "timedOut": null,
+              "duration": 2069,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(User);\n//verify the home is visble \n_Homepage.homepage.verifyHomepage();\n//verify the products page is opened and products are displayed\n_Homepage.homepage.verifyProductsPage();\n//verify minimum 6 products are displayed\n_Homepage.homepage.verifyMinimumProductsDisplayed(this.data.product_length);",
+              "err": {},
+              "uuid": "bc362bb9-59c8-4ceb-a99f-b8d07946c896",
+              "parentUUID": "5e626ca8-05b0-42e9-9b0d-08a276d3e428",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bc362bb9-59c8-4ceb-a99f-b8d07946c896"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2069,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "reportFilename": "[status]_[datetime]-[name]",
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
