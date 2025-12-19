@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-const rerunFailed = require("cypress-rerun-failed-specs-sid");
+const rerunFailed = require("cypress-rerun-failed-specs-sid-g");
 
 module.exports = defineConfig({
   reporter: "mochawesome",

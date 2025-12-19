@@ -37,7 +37,7 @@
   "devDependencies": {
     "concurrently": "^9.2.0",
     "cypress": "^14.5.2",
-    "cypress-rerun-failed-specs-sid": "^1.0.7",
+    "cypress-rerun-failed-specs-sid-g": "^1.0.7",
     "sid-cypress-rerun-failed": "file:../PLUGIN/cypress_rerun_failed_plugin_code/sid-cypress-rerun-failed-1.0.0.tgz"
   }
 }
