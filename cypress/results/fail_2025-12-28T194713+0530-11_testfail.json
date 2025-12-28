@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2025-12-19T10:39:11.776Z",
-    "end": "2025-12-19T10:39:36.302Z",
-    "duration": 24526,
+    "start": "2025-12-28T14:16:48.125Z",
+    "end": "2025-12-28T14:17:13.104Z",
+    "duration": 24979,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "350b2e7d-d344-4d50-a0ee-6d22ea615d4d",
+      "uuid": "fc0f379c-eeec-48d6-b48b-7fd98e3302d6",
       "title": "",
       "fullFile": "cypress\\e2e\\Regression_Suit\\11_testfail.cy.js",
       "file": "cypress\\e2e\\Regression_Suit\\11_testfail.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d003bd62-e904-4270-a6e0-f0df30c16f28",
+          "uuid": "a5882411-30b6-4f63-a08a-47f64e276311",
           "title": "11_failed",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "02_failed",
               "fullTitle": "11_failed 02_failed",
               "timedOut": null,
-              "duration": 11099,
+              "duration": 12092,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[id=\"shopping_cart_container\"] span`, but never found it.\n    at Homepage.verifyCartIconQuantity (webpack://cypress_task/./cypress/support/pageObjects/Homepage.js:31:96)\n    at Context.eval (webpack://cypress_task/./cypress/e2e/Regression_Suit/11_testfail.cy.js:53:17)",
                 "diff": null
               },
-              "uuid": "8b30c747-d6cf-4b7e-9208-990119ba64ca",
-              "parentUUID": "d003bd62-e904-4270-a6e0-f0df30c16f28",
+              "uuid": "acf40974-1f7c-411b-bed8-7b354966c1d5",
+              "parentUUID": "a5882411-30b6-4f63-a08a-47f64e276311",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "8b30c747-d6cf-4b7e-9208-990119ba64ca"
+            "acf40974-1f7c-411b-bed8-7b354966c1d5"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 11099,
+          "duration": 12092,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

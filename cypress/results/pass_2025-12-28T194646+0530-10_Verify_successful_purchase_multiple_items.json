@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-12-19T10:38:15.555Z",
-    "end": "2025-12-19T10:38:22.053Z",
-    "duration": 6498,
+    "start": "2025-12-28T14:16:39.859Z",
+    "end": "2025-12-28T14:16:46.492Z",
+    "duration": 6633,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d2db3f4a-eb52-4906-bce7-d96892472939",
+      "uuid": "b60393e9-1d44-4950-9535-f03fc36a1d8a",
       "title": "",
       "fullFile": "cypress\\e2e\\Regression_Suit\\10_Verify_successful_purchase_multiple_items.cy.js",
       "file": "cypress\\e2e\\Regression_Suit\\10_Verify_successful_purchase_multiple_items.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "477df4dd-4704-4923-b95a-4d3e7eef195e",
+          "uuid": "84256a0c-cb32-4ca1-afdc-33794d5937e2",
           "title": "10_verify_complete_successful_purchase_of_single_item",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "01_verify_complete_successful_purchase_of_single_item",
               "fullTitle": "10_verify_complete_successful_purchase_of_single_item 01_verify_complete_successful_purchase_of_single_item",
               "timedOut": null,
-              "duration": 5592,
+              "duration": 5673,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\ncy.wait(1000);\n//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bike_light, Price_Item_1);\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bagpack, Price_Item_2);\n//verify total Price to pay after tax\n_CheckoutPage.checkout_page.verifyTotalPriceToPay();\n//click on Finish Button\n_CheckoutPage.checkout_page.clickOnFinishButton();\n//verify Purchase was successful\n_CheckoutPage.checkout_page.VerifyPurchase_Success();\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);",
               "err": {},
-              "uuid": "71b70869-9c3e-4a64-86fa-bfb8164cc603",
-              "parentUUID": "477df4dd-4704-4923-b95a-4d3e7eef195e",
+              "uuid": "e626734d-35e8-4943-b0ce-98dcbd1123da",
+              "parentUUID": "84256a0c-cb32-4ca1-afdc-33794d5937e2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "71b70869-9c3e-4a64-86fa-bfb8164cc603"
+            "e626734d-35e8-4943-b0ce-98dcbd1123da"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5592,
+          "duration": 5673,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
