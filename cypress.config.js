@@ -16,7 +16,7 @@ module.exports = defineConfig({
     reportFilename: "[status]_[datetime]-[name]",
     overwrite: true,
     html: false,
-    json: true
+    json: true,
   },
   chromeWebSecurity: false,
   env: {
@@ -36,11 +36,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on("task", {});
 
-      rerunFailed(on, config)
+      rerunFailed(on, config);
       return config;
-
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
   },
-
 });
