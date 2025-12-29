@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2025-12-28T14:17:41.365Z",
-    "end": "2025-12-28T14:17:44.113Z",
-    "duration": 2748,
+    "start": "2025-12-29T14:33:06.295Z",
+    "end": "2025-12-29T14:33:09.093Z",
+    "duration": 2798,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b38c1ce1-02df-4634-bccf-c228ef742e2e",
+      "uuid": "eaf19a5c-c97b-4e72-9fbc-859c5074b6f8",
       "title": "",
       "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK003_Verify user can add a product to cart.cy.js",
       "file": "cypress\\e2e\\Smoke_Suit\\SMK003_Verify user can add a product to cart.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4e437736-4803-4f67-a183-d9040ac5eab9",
+          "uuid": "adfe29a9-7bcc-491a-b67d-d7db4c54225e",
           "title": "SMK003_Verify user can add a product to cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "SMK003_Verify user can add a product to cart",
               "fullTitle": "SMK003_Verify user can add a product to cart SMK003_Verify user can add a product to cart",
               "timedOut": null,
-              "duration": 1828,
+              "duration": 1886,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);",
               "err": {},
-              "uuid": "9e17ca20-2a2d-4540-93d1-ba925db3a595",
-              "parentUUID": "4e437736-4803-4f67-a183-d9040ac5eab9",
+              "uuid": "8e2a4050-fe5a-4b70-9eeb-94b9e714c6ef",
+              "parentUUID": "adfe29a9-7bcc-491a-b67d-d7db4c54225e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9e17ca20-2a2d-4540-93d1-ba925db3a595"
+            "8e2a4050-fe5a-4b70-9eeb-94b9e714c6ef"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1828,
+          "duration": 1886,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

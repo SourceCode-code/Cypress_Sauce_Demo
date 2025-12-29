@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2025-12-28T14:16:25.365Z",
-    "end": "2025-12-28T14:17:53.100Z",
-    "duration": 87735
+    "start": "2025-12-29T14:32:33.119Z",
+    "end": "2025-12-29T14:34:05.422Z",
+    "duration": 92303
   },
   "results": [
     {
-      "uuid": "fc0f379c-eeec-48d6-b48b-7fd98e3302d6",
+      "uuid": "572dbff2-3bdc-4b2b-836d-a16d060d202b",
       "title": "",
       "fullFile": "cypress\\e2e\\Regression_Suit\\11_testfail.cy.js",
       "file": "cypress\\e2e\\Regression_Suit\\11_testfail.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a5882411-30b6-4f63-a08a-47f64e276311",
+          "uuid": "8fd55ec5-a4bf-48a0-a1d2-3f967349febf",
           "title": "11_failed",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "02_failed",
               "fullTitle": "11_failed 02_failed",
               "timedOut": null,
-              "duration": 12092,
+              "duration": 11591,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[id=\"shopping_cart_container\"] span`, but never found it.\n    at Homepage.verifyCartIconQuantity (webpack://cypress_task/./cypress/support/pageObjects/Homepage.js:31:96)\n    at Context.eval (webpack://cypress_task/./cypress/e2e/Regression_Suit/11_testfail.cy.js:53:17)",
                 "diff": null
               },
-              "uuid": "acf40974-1f7c-411b-bed8-7b354966c1d5",
-              "parentUUID": "a5882411-30b6-4f63-a08a-47f64e276311",
+              "uuid": "a95d462a-5314-43cd-ae55-a94b2fdb3e8f",
+              "parentUUID": "8fd55ec5-a4bf-48a0-a1d2-3f967349febf",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "acf40974-1f7c-411b-bed8-7b354966c1d5"
+            "a95d462a-5314-43cd-ae55-a94b2fdb3e8f"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 12092,
+          "duration": 11591,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -80,7 +80,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "2af36f30-af47-4dc1-8fb2-44eafe515faa",
+      "uuid": "9d23a848-e5c6-4dc7-9ec1-be81ec6b453e",
       "title": "",
       "fullFile": "cypress\\e2e\\Cart_Testcases\\07_verify_Adding_single_item_to_cart.cy.js",
       "file": "cypress\\e2e\\Cart_Testcases\\07_verify_Adding_single_item_to_cart.cy.js",
@@ -89,7 +89,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "74d7f5d4-cb97-44bf-b3f8-65d1bed2af0b",
+          "uuid": "d91dde0f-0741-45ea-a411-b02f57a4b9ae",
           "title": "07_verify_Adding_single_item_to_cart",
           "fullFile": "",
           "file": "",
@@ -100,7 +100,7 @@
               "title": "01_verify_Adding_single_item_to_cart",
               "fullTitle": "07_verify_Adding_single_item_to_cart 01_verify_Adding_single_item_to_cart",
               "timedOut": null,
-              "duration": 2264,
+              "duration": 3052,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -109,20 +109,20 @@
               "context": null,
               "code": "//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);",
               "err": {},
-              "uuid": "07724dac-92b7-41f1-b5ab-f42d4946ce53",
-              "parentUUID": "74d7f5d4-cb97-44bf-b3f8-65d1bed2af0b",
+              "uuid": "3e93cc67-9b76-492e-8552-cdf750234203",
+              "parentUUID": "d91dde0f-0741-45ea-a411-b02f57a4b9ae",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "07724dac-92b7-41f1-b5ab-f42d4946ce53"
+            "3e93cc67-9b76-492e-8552-cdf750234203"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2264,
+          "duration": 3052,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -138,7 +138,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "209fd800-54a7-41e0-a8e7-92a6c7609335",
+      "uuid": "8d69fdae-2204-42bf-8975-e3b1cb122074",
       "title": "",
       "fullFile": "cypress\\e2e\\Cart_Testcases\\08_verify_removing_item_from_the_cart.cy.js",
       "file": "cypress\\e2e\\Cart_Testcases\\08_verify_removing_item_from_the_cart.cy.js",
@@ -147,7 +147,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "98ba82ef-223a-432d-9df4-97daffe60418",
+          "uuid": "45c52b85-1f10-4013-969b-d8366553983e",
           "title": "08_verify_removing_item_from_the_cart",
           "fullFile": "",
           "file": "",
@@ -158,7 +158,7 @@
               "title": "02_verify_removing_item_from_the_cart",
               "fullTitle": "08_verify_removing_item_from_the_cart 02_verify_removing_item_from_the_cart",
               "timedOut": null,
-              "duration": 2095,
+              "duration": 2120,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -167,20 +167,20 @@
               "context": null,
               "code": "//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//verify no item present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);",
               "err": {},
-              "uuid": "e910a642-4176-411a-ba87-c7e007e73a0a",
-              "parentUUID": "98ba82ef-223a-432d-9df4-97daffe60418",
+              "uuid": "6de1e649-c30b-4257-8f82-b433b17e70b1",
+              "parentUUID": "45c52b85-1f10-4013-969b-d8366553983e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e910a642-4176-411a-ba87-c7e007e73a0a"
+            "6de1e649-c30b-4257-8f82-b433b17e70b1"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2095,
+          "duration": 2120,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -196,7 +196,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "e1fcbc5e-3c50-4aa7-9a2e-969f6d8913cd",
+      "uuid": "3ab579ab-0643-4f9e-a2c7-a45e4afec6d9",
       "title": "",
       "fullFile": "cypress\\e2e\\Cart_Testcases\\09_verify_updating_of_cart_after_adding_multiple_item.cy.js",
       "file": "cypress\\e2e\\Cart_Testcases\\09_verify_updating_of_cart_after_adding_multiple_item.cy.js",
@@ -205,7 +205,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "08d67b37-95b9-43a2-9d74-f12a4dfe49d0",
+          "uuid": "c4302df9-6103-48b0-b22d-9b54b00f7566",
           "title": "09_verify_updating_of_cart_after_adding_multiple_item",
           "fullFile": "",
           "file": "",
@@ -216,7 +216,7 @@
               "title": "03_verify_updating_of_cart_after_adding_multiple_item",
               "fullTitle": "09_verify_updating_of_cart_after_adding_multiple_item 03_verify_updating_of_cart_after_adding_multiple_item",
               "timedOut": null,
-              "duration": 3239,
+              "duration": 3163,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -225,20 +225,20 @@
               "context": null,
               "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\ncy.wait(1000);\n//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bike_light);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify bike light  item not  present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bagpack);\n//remove the item form the container \n_CartPage.cartpage.RemoveItemfromCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//verify no item present in the cart\n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);",
               "err": {},
-              "uuid": "d113a3c2-fbd0-4bb7-8d47-3d97cc72a676",
-              "parentUUID": "08d67b37-95b9-43a2-9d74-f12a4dfe49d0",
+              "uuid": "29434459-8c2f-4dad-8a6b-53622bc7082c",
+              "parentUUID": "c4302df9-6103-48b0-b22d-9b54b00f7566",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d113a3c2-fbd0-4bb7-8d47-3d97cc72a676"
+            "29434459-8c2f-4dad-8a6b-53622bc7082c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3239,
+          "duration": 3163,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -254,413 +254,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "b60393e9-1d44-4950-9535-f03fc36a1d8a",
-      "title": "",
-      "fullFile": "cypress\\e2e\\Regression_Suit\\10_Verify_successful_purchase_multiple_items.cy.js",
-      "file": "cypress\\e2e\\Regression_Suit\\10_Verify_successful_purchase_multiple_items.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "84256a0c-cb32-4ca1-afdc-33794d5937e2",
-          "title": "10_verify_complete_successful_purchase_of_single_item",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "01_verify_complete_successful_purchase_of_single_item",
-              "fullTitle": "10_verify_complete_successful_purchase_of_single_item 01_verify_complete_successful_purchase_of_single_item",
-              "timedOut": null,
-              "duration": 5673,
-              "state": "passed",
-              "speed": "medium",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\ncy.wait(1000);\n//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bike_light, Price_Item_1);\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bagpack, Price_Item_2);\n//verify total Price to pay after tax\n_CheckoutPage.checkout_page.verifyTotalPriceToPay();\n//click on Finish Button\n_CheckoutPage.checkout_page.clickOnFinishButton();\n//verify Purchase was successful\n_CheckoutPage.checkout_page.VerifyPurchase_Success();\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);",
-              "err": {},
-              "uuid": "e626734d-35e8-4943-b0ce-98dcbd1123da",
-              "parentUUID": "84256a0c-cb32-4ca1-afdc-33794d5937e2",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "e626734d-35e8-4943-b0ce-98dcbd1123da"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 5673,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "d1ed77b0-16e3-4e82-8489-7087eec87954",
-      "title": "",
-      "fullFile": "cypress\\e2e\\Checkout_Testcases\\04_verify_complete_successful_purchase_of_single_item.cy.js",
-      "file": "cypress\\e2e\\Checkout_Testcases\\04_verify_complete_successful_purchase_of_single_item.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "5d6258d6-dff6-456d-bdd7-0417b0090b45",
-          "title": "04_verify_complete_successful_purchase_of_single_item",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "01_verify_complete_successful_purchase_of_single_item",
-              "fullTitle": "04_verify_complete_successful_purchase_of_single_item 01_verify_complete_successful_purchase_of_single_item",
-              "timedOut": null,
-              "duration": 4687,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bike_light, Price);\n//verify total Price to pay after tax\n_CheckoutPage.checkout_page.verifyTotalPriceToPay();\n//click on Finish Button\n_CheckoutPage.checkout_page.clickOnFinishButton();\n//verify Purchase was successful\n_CheckoutPage.checkout_page.VerifyPurchase_Success();\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);",
-              "err": {},
-              "uuid": "f80e4e3e-3301-4499-98ee-e2c81407dd4e",
-              "parentUUID": "5d6258d6-dff6-456d-bdd7-0417b0090b45",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "f80e4e3e-3301-4499-98ee-e2c81407dd4e"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 4687,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "7a8eb7e0-dcc0-42c0-bc6e-b63b0bea23d2",
-      "title": "",
-      "fullFile": "cypress\\e2e\\Checkout_Testcases\\05_verify_checkout_with_missing_firstname_fails.cy.js",
-      "file": "cypress\\e2e\\Checkout_Testcases\\05_verify_checkout_with_missing_firstname_fails.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "8bb2035a-b16d-4ec7-b3a2-5ac7413020cc",
-          "title": "05_verify_checkout_with_missing_firstname_fails.cy.js",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "02_verify_checkout_with_missing_firstname_fails.cy.js",
-              "fullTitle": "05_verify_checkout_with_missing_firstname_fails.cy.js 02_verify_checkout_with_missing_firstname_fails.cy.js",
-              "timedOut": null,
-              "duration": 3748,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify error is displayed \n_CheckoutPage.checkout_page.VerifyError_Pop_up();\n//verify Item Still added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify still on checkout page \n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();",
-              "err": {},
-              "uuid": "7e19281a-1be8-44d7-b186-3af2b73d79f2",
-              "parentUUID": "8bb2035a-b16d-4ec7-b3a2-5ac7413020cc",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "7e19281a-1be8-44d7-b186-3af2b73d79f2"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 3748,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "305f556d-f8a5-47d3-a793-78490ea3f98f",
-      "title": "",
-      "fullFile": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
-      "file": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "3e0e9c99-2729-456b-9642-a4e1bda3bb9c",
-          "title": "06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
-              "fullTitle": "06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js 03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
-              "timedOut": null,
-              "duration": 4525,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on cancel button\n_CheckoutPage.checkout_page.clickOnCancelButton();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);",
-              "err": {},
-              "uuid": "19f0c1d0-25a8-4580-a473-97cacd6f1cc8",
-              "parentUUID": "3e0e9c99-2729-456b-9642-a4e1bda3bb9c",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "19f0c1d0-25a8-4580-a473-97cacd6f1cc8"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 4525,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "2d577492-10c9-45d8-88f9-f40842807550",
-      "title": "",
-      "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK001_Verify user can log in with valid credentials.cy.js",
-      "file": "cypress\\e2e\\Smoke_Suit\\SMK001_Verify user can log in with valid credentials.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "49fe7e5e-0141-4974-bfd4-c5861d4749f7",
-          "title": "SMK001_Verify user can log in with valid credentials",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "SMK001_Verify user can log in with valid credentials",
-              "fullTitle": "SMK001_Verify user can log in with valid credentials SMK001_Verify user can log in with valid credentials",
-              "timedOut": null,
-              "duration": 1447,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(User);\n//verify the home is visble \n_Homepage.homepage.verifyHomepage();\n//verify the products page is opened and products are displayed\n_Homepage.homepage.verifyProductsPage();",
-              "err": {},
-              "uuid": "ee045d38-ba45-40a6-82fc-80ea1a4a20f2",
-              "parentUUID": "49fe7e5e-0141-4974-bfd4-c5861d4749f7",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "ee045d38-ba45-40a6-82fc-80ea1a4a20f2"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1447,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "b2d6f1b0-a371-43c6-b604-6d4533b8b365",
-      "title": "",
-      "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK002_Verify product list loads after login.cy.js",
-      "file": "cypress\\e2e\\Smoke_Suit\\SMK002_Verify product list loads after login.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "61eca8f4-75fd-406b-bf16-1461b9858a16",
-          "title": "SMK002_Verify product list loads after login",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "SMK002_Verify product list loads after login",
-              "fullTitle": "SMK002_Verify product list loads after login SMK002_Verify product list loads after login",
-              "timedOut": null,
-              "duration": 2243,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(User);\n//verify the home is visble \n_Homepage.homepage.verifyHomepage();\n//verify the products page is opened and products are displayed\n_Homepage.homepage.verifyProductsPage();\n//verify minimum 6 products are displayed\n_Homepage.homepage.verifyMinimumProductsDisplayed(this.data.product_length);",
-              "err": {},
-              "uuid": "8f1f483a-63cb-4bcf-b98b-eb5b3ebf70c7",
-              "parentUUID": "61eca8f4-75fd-406b-bf16-1461b9858a16",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "8f1f483a-63cb-4bcf-b98b-eb5b3ebf70c7"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 2243,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "b38c1ce1-02df-4634-bccf-c228ef742e2e",
-      "title": "",
-      "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK003_Verify user can add a product to cart.cy.js",
-      "file": "cypress\\e2e\\Smoke_Suit\\SMK003_Verify user can add a product to cart.cy.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "4e437736-4803-4f67-a183-d9040ac5eab9",
-          "title": "SMK003_Verify user can add a product to cart",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "SMK003_Verify user can add a product to cart",
-              "fullTitle": "SMK003_Verify user can add a product to cart SMK003_Verify user can add a product to cart",
-              "timedOut": null,
-              "duration": 1828,
-              "state": "passed",
-              "speed": "fast",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);",
-              "err": {},
-              "uuid": "9e17ca20-2a2d-4540-93d1-ba925db3a595",
-              "parentUUID": "4e437736-4803-4f67-a183-d9040ac5eab9",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "9e17ca20-2a2d-4540-93d1-ba925db3a595"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 1828,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    },
-    {
-      "uuid": "b5e349ee-9b07-45d3-8155-8fbea986d215",
+      "uuid": "41677202-2c57-47ef-9f38-22fb58e98285",
       "title": "",
       "fullFile": "cypress\\e2e\\Login_Testcases\\01_Verify_Valid_Login.cy.js",
       "file": "cypress\\e2e\\Login_Testcases\\01_Verify_Valid_Login.cy.js",
@@ -669,7 +263,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "171d3ae2-5263-4c01-92db-336346974662",
+          "uuid": "1eb575bd-c245-4b6b-bd77-ece59378c8cc",
           "title": "01_Verify_Valid_Login",
           "fullFile": "",
           "file": "",
@@ -680,7 +274,7 @@
               "title": "01_Verify_Valid_Login",
               "fullTitle": "01_Verify_Valid_Login 01_Verify_Valid_Login",
               "timedOut": null,
-              "duration": 1254,
+              "duration": 1488,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -689,20 +283,20 @@
               "context": null,
               "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(User);\n//verify the home is visble \n_Homepage.homepage.verifyHomepage();",
               "err": {},
-              "uuid": "30ff7aa7-0ec5-4ee1-8447-ecfd5f2771c3",
-              "parentUUID": "171d3ae2-5263-4c01-92db-336346974662",
+              "uuid": "6640aa00-91b8-4ae5-b169-4a8771e271ad",
+              "parentUUID": "1eb575bd-c245-4b6b-bd77-ece59378c8cc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "30ff7aa7-0ec5-4ee1-8447-ecfd5f2771c3"
+            "6640aa00-91b8-4ae5-b169-4a8771e271ad"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1254,
+          "duration": 1488,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -718,7 +312,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "8a513f04-69e6-4325-8a24-1b526fd0a02f",
+      "uuid": "b7aea5ae-3803-4285-8fd9-fe5a4f65d735",
       "title": "",
       "fullFile": "cypress\\e2e\\Login_Testcases\\02_Verify_Invalid_Login_by_wrong_password.cy.js",
       "file": "cypress\\e2e\\Login_Testcases\\02_Verify_Invalid_Login_by_wrong_password.cy.js",
@@ -727,7 +321,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2dc08730-3811-4d06-9026-539265f26eeb",
+          "uuid": "899b9346-27da-45d8-9ff9-84c401084d18",
           "title": "02_Verify_Invalid_Login_by_wrong_password",
           "fullFile": "",
           "file": "",
@@ -738,7 +332,7 @@
               "title": "02_Verify_Invalid_Login_by_wrong_password",
               "fullTitle": "02_Verify_Invalid_Login_by_wrong_password 02_Verify_Invalid_Login_by_wrong_password",
               "timedOut": null,
-              "duration": 1485,
+              "duration": 1506,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -747,20 +341,20 @@
               "context": null,
               "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(Invalid_User);\n//verify the home is visble \n_navigationPage.NavigationPage.verifyLoginErrorPopup(ErrorText);",
               "err": {},
-              "uuid": "e5f79bf2-daa2-4d76-a3f5-5e6ba0a8f8b4",
-              "parentUUID": "2dc08730-3811-4d06-9026-539265f26eeb",
+              "uuid": "e8c65712-d159-4872-b946-e5cd612e5d81",
+              "parentUUID": "899b9346-27da-45d8-9ff9-84c401084d18",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e5f79bf2-daa2-4d76-a3f5-5e6ba0a8f8b4"
+            "e8c65712-d159-4872-b946-e5cd612e5d81"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1485,
+          "duration": 1506,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -776,7 +370,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "b6e0141e-8cbb-4edd-983c-511e7098fd9a",
+      "uuid": "610f1187-c918-4afb-8732-7128d9acc357",
       "title": "",
       "fullFile": "cypress\\e2e\\Login_Testcases\\03_Verify_Lockout_user_failed_login.cy.js",
       "file": "cypress\\e2e\\Login_Testcases\\03_Verify_Lockout_user_failed_login.cy.js",
@@ -785,7 +379,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4657ef04-7d6e-49f6-9ef7-309bd43f0e1f",
+          "uuid": "a40c46e2-eaa7-4fab-b111-db2d15d545ca",
           "title": "03_Verify_Lockout_user_failed_login",
           "fullFile": "",
           "file": "",
@@ -796,7 +390,7 @@
               "title": "03_Verify_Lockout_user_failed_login",
               "fullTitle": "03_Verify_Lockout_user_failed_login 03_Verify_Lockout_user_failed_login",
               "timedOut": null,
-              "duration": 1167,
+              "duration": 2625,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -805,20 +399,426 @@
               "context": null,
               "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(Locket_out_User);\n//verify the home is visble \n_navigationPage.NavigationPage.verifyLoginErrorPopup(ErrorText);",
               "err": {},
-              "uuid": "9764cd95-e2e9-4392-8958-641d94d84ba6",
-              "parentUUID": "4657ef04-7d6e-49f6-9ef7-309bd43f0e1f",
+              "uuid": "9c814a29-0a31-4e14-b7bc-0a8c0581ab3d",
+              "parentUUID": "a40c46e2-eaa7-4fab-b111-db2d15d545ca",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9764cd95-e2e9-4392-8958-641d94d84ba6"
+            "9c814a29-0a31-4e14-b7bc-0a8c0581ab3d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1167,
+          "duration": 2625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c3944a8e-37bd-408d-a4a2-75360cc0673f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK001_Verify user can log in with valid credentials.cy.js",
+      "file": "cypress\\e2e\\Smoke_Suit\\SMK001_Verify user can log in with valid credentials.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2149f272-ac39-4b78-a213-37ef3b009598",
+          "title": "SMK001_Verify user can log in with valid credentials",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SMK001_Verify user can log in with valid credentials",
+              "fullTitle": "SMK001_Verify user can log in with valid credentials SMK001_Verify user can log in with valid credentials",
+              "timedOut": null,
+              "duration": 2381,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(User);\n//verify the home is visble \n_Homepage.homepage.verifyHomepage();\n//verify the products page is opened and products are displayed\n_Homepage.homepage.verifyProductsPage();",
+              "err": {},
+              "uuid": "0b3a5dff-ed13-4253-8cd4-1feb488f9225",
+              "parentUUID": "2149f272-ac39-4b78-a213-37ef3b009598",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b3a5dff-ed13-4253-8cd4-1feb488f9225"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2381,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0fac0da2-0b54-49e4-8e4b-4ad7f27210f7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK002_Verify product list loads after login.cy.js",
+      "file": "cypress\\e2e\\Smoke_Suit\\SMK002_Verify product list loads after login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1390d37b-2480-4e32-a649-37a63ffeba42",
+          "title": "SMK002_Verify product list loads after login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SMK002_Verify product list loads after login",
+              "fullTitle": "SMK002_Verify product list loads after login SMK002_Verify product list loads after login",
+              "timedOut": null,
+              "duration": 2655,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login with valid user\n_navigationPage.NavigationPage.loginWithCredentials(User);\n//verify the home is visble \n_Homepage.homepage.verifyHomepage();\n//verify the products page is opened and products are displayed\n_Homepage.homepage.verifyProductsPage();\n//verify minimum 6 products are displayed\n_Homepage.homepage.verifyMinimumProductsDisplayed(this.data.product_length);",
+              "err": {},
+              "uuid": "c19d7341-3e38-4fe8-a69c-31f011d81cc3",
+              "parentUUID": "1390d37b-2480-4e32-a649-37a63ffeba42",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c19d7341-3e38-4fe8-a69c-31f011d81cc3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2655,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "eaf19a5c-c97b-4e72-9fbc-859c5074b6f8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Smoke_Suit\\SMK003_Verify user can add a product to cart.cy.js",
+      "file": "cypress\\e2e\\Smoke_Suit\\SMK003_Verify user can add a product to cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "adfe29a9-7bcc-491a-b67d-d7db4c54225e",
+          "title": "SMK003_Verify user can add a product to cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "SMK003_Verify user can add a product to cart",
+              "fullTitle": "SMK003_Verify user can add a product to cart SMK003_Verify user can add a product to cart",
+              "timedOut": null,
+              "duration": 1886,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify remove item button is visible for the same product\n_Homepage.homepage.verifyRemovefromCartButton(Bagpack);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);",
+              "err": {},
+              "uuid": "8e2a4050-fe5a-4b70-9eeb-94b9e714c6ef",
+              "parentUUID": "adfe29a9-7bcc-491a-b67d-d7db4c54225e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8e2a4050-fe5a-4b70-9eeb-94b9e714c6ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1886,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ee198f61-56f9-4837-9ea3-1c1d572d74ce",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Regression_Suit\\10_Verify_successful_purchase_multiple_items.cy.js",
+      "file": "cypress\\e2e\\Regression_Suit\\10_Verify_successful_purchase_multiple_items.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aae36d89-601b-42a5-9b9d-d397ccfe5e4a",
+          "title": "10_verify_complete_successful_purchase_of_single_item",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "01_verify_complete_successful_purchase_of_single_item",
+              "fullTitle": "10_verify_complete_successful_purchase_of_single_item 01_verify_complete_successful_purchase_of_single_item",
+              "timedOut": null,
+              "duration": 5889,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\ncy.wait(1000);\n//add Sauce Labs Backpack in the cart\n_Homepage.homepage.AddingItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bagpack);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(2);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bike_light, Price_Item_1);\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bagpack, Price_Item_2);\n//verify total Price to pay after tax\n_CheckoutPage.checkout_page.verifyTotalPriceToPay();\n//click on Finish Button\n_CheckoutPage.checkout_page.clickOnFinishButton();\n//verify Purchase was successful\n_CheckoutPage.checkout_page.VerifyPurchase_Success();\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);",
+              "err": {},
+              "uuid": "9032e398-9886-42e6-8cb7-c69abc0bf221",
+              "parentUUID": "aae36d89-601b-42a5-9b9d-d397ccfe5e4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9032e398-9886-42e6-8cb7-c69abc0bf221"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5889,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0cb40e26-9c98-49f1-a64d-7069041aceac",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Checkout_Testcases\\04_verify_complete_successful_purchase_of_single_item.cy.js",
+      "file": "cypress\\e2e\\Checkout_Testcases\\04_verify_complete_successful_purchase_of_single_item.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "52353038-0294-40b5-a4e5-266346eb3a77",
+          "title": "04_verify_complete_successful_purchase_of_single_item",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "01_verify_complete_successful_purchase_of_single_item",
+              "fullTitle": "04_verify_complete_successful_purchase_of_single_item 01_verify_complete_successful_purchase_of_single_item",
+              "timedOut": null,
+              "duration": 4756,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify the item is added to the cart \n_CheckoutPage.checkout_page.VerifyProductNameAndPriceInFinalStep(Bike_light, Price);\n//verify total Price to pay after tax\n_CheckoutPage.checkout_page.verifyTotalPriceToPay();\n//click on Finish Button\n_CheckoutPage.checkout_page.clickOnFinishButton();\n//verify Purchase was successful\n_CheckoutPage.checkout_page.VerifyPurchase_Success();\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);",
+              "err": {},
+              "uuid": "fae4a3a9-095f-4dd0-be72-d7619611edfb",
+              "parentUUID": "52353038-0294-40b5-a4e5-266346eb3a77",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fae4a3a9-095f-4dd0-be72-d7619611edfb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4756,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4cac264b-3518-47d8-8060-108c0db7442c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Checkout_Testcases\\05_verify_checkout_with_missing_firstname_fails.cy.js",
+      "file": "cypress\\e2e\\Checkout_Testcases\\05_verify_checkout_with_missing_firstname_fails.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7b77f83-4b0b-48fb-b9c9-73dcecda89fd",
+          "title": "05_verify_checkout_with_missing_firstname_fails.cy.js",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "02_verify_checkout_with_missing_firstname_fails.cy.js",
+              "fullTitle": "05_verify_checkout_with_missing_firstname_fails.cy.js 02_verify_checkout_with_missing_firstname_fails.cy.js",
+              "timedOut": null,
+              "duration": 3814,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on Continue button\n_CheckoutPage.checkout_page.clickOnContinueButton();\n//verify error is displayed \n_CheckoutPage.checkout_page.VerifyError_Pop_up();\n//verify Item Still added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//verify still on checkout page \n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();",
+              "err": {},
+              "uuid": "5ae39a8c-363b-44f0-bca8-84de2246b36c",
+              "parentUUID": "d7b77f83-4b0b-48fb-b9c9-73dcecda89fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5ae39a8c-363b-44f0-bca8-84de2246b36c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3814,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "54081bf2-88ac-498b-8028-aba74bec3ee2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and_redirected_to_cart.cy.js",
+      "file": "cypress\\e2e\\Checkout_Testcases\\06_verify_user_can_cancel_checkout_and_redirected_to_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28f05a4b-b6ab-444d-b0e1-bc8639950dd3",
+          "title": "06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+              "fullTitle": "06_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js 03_verify_user_can_cancel_checkout_and redirected_to_cart.cy.js",
+              "timedOut": null,
+              "duration": 5595,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//verify the  no item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(0);\n//add Sauce Labs Bike Light in the cart\n_Homepage.homepage.AddingItemtoCart(Bike_light);\n//click on the cart icon \n_Homepage.homepage.ClickonCartBtn();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on checkout button\n_CartPage.cartpage.clickOnCheckoutButton();\n//verify checkout page open\n_CheckoutPage.checkout_page.verifytheCheckoutpageOpened();\n//enter your information for checkout\n_CheckoutPage.checkout_page.enterDetailsforCheckout(checkout_Info_Parameter);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);\n//click on cancel button\n_CheckoutPage.checkout_page.clickOnCancelButton();\n//verify the product is added in to the cart \n_CartPage.cartpage.verifytheCartpageOpened();\n//verify the item is added to the cart \n_CartPage.cartpage.VerifyAddedItemtoCart(Bike_light);\n//verify the item count added to cart \n_Homepage.homepage.verifyCartIconQuantity(1);",
+              "err": {},
+              "uuid": "7718c57f-21df-4bc1-8570-9b4afffddc23",
+              "parentUUID": "28f05a4b-b6ab-444d-b0e1-bc8639950dd3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7718c57f-21df-4bc1-8570-9b4afffddc23"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5595,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

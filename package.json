@@ -26,6 +26,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cypress-rerun-failed-specs-sid-g": "^1.0.22",
     "exceljs": "^4.4.0",
     "fs": "^0.0.1-security",
     "mochawesome": "^7.1.3",
@@ -36,7 +37,6 @@
   },
   "devDependencies": {
     "concurrently": "^9.2.0",
-    "cypress": "^14.5.2",
-    "cypress-rerun-failed-specs-sid-g": "^1.0.19"
+    "cypress": "^14.5.2"
   }
 }
